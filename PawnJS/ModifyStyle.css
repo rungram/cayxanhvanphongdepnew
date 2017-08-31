@@ -1,0 +1,88 @@
+/*# sourceMappingURL=style.css.map */
+.jFiler-theme-dragdropbox ul > li {
+    list-style:none !important;width:auto !important;background:none !important;
+         border:none !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+}
+.wizard > .actions > ul > li {
+     list-style:none !important;width:auto !important;background:none !important;
+         border:none !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+}
+.regis_credit_onlne .content_reg_credict {
+    border-width: 1px;
+    border-color: #c9c9c9;
+    border-style: solid;
+    border-radius: 7px;
+    min-height: 300px;
+    margin-top: 17px;
+    margin-bottom: 60px;
+}
+
+@media (max-width: 600) {
+  .wizard > .steps > ul > li {
+    width: 100%;
+}
+}
+
+.wizard > .content {
+    background:none;
+}
+.wizard > .content > .body {
+    position:relative;
+}
+ .regis_credit_onlne .nav .active a, .regis_credit_onlne .nav .active span {
+    background-color: transparent;
+    border: none !important;
+    color: #515151;
+   display: table;
+}
+.regis_credit_onlne .nav .stt_span {
+    border-right: 1px solid #c9c9c9 !important;
+}
+.wizard > .content > .body {
+         width: 100%; 
+     height: 100%; 
+     padding: 0%; 
+}
+ .regis_credit_onlne .nav li.current  { background: url(../Files/Images/register-online/step.png) no-repeat right center;
+  background-position: 95% 10px;
+    }
+  .regis_credit_onlne .nav li.done  { background: url(../Files/Images/register-online/step.png) no-repeat right center;
+  background-position: 95% 10px;
+    }
+  
+.content-notify > span {
+        list-style: none;
+    display: inline;
+}
+.wizard > .content > .body label.error {
+    color:red;
+    font-weight:normal;
+}
+
+.regis_credit_onlne .nav li.current {
+    background: url(../Files/Images/register-online/step.png) no-repeat right center;
+    background-position: 95% 10px;
+}
+
+.regis_credit_onlne .nav li.done {
+    background: url(../images/register-online/step_active.png) no-repeat right center;
+    background-position: 95% 10px;
+}
+.regis_credit_onlne .nav .done a {
+    
+    color: #515151;
+  
+}
+.wizard > .steps .error a, .wizard > .steps .error a:hover, .wizard > .steps .error a:active {
+       color: #909090;
+}
+.regis_credit_onlne .nav li:last-child.current {
+       background: url(../images/register-online/step_active.png) no-repeat right center;
+    background-position: 95% 10px;
+}
+    .regis_credit_onlne .nav li:last-child.current > a {    color: #515151;
+    }
