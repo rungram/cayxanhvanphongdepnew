@@ -25,7 +25,7 @@
 	
 	
 	include_once _lib."functions_giohang.php";
-	$config_url='localhost:81/cayxanhvanphongdep';
+	$config_url='localhost:81/cayxanhvanphongdepnew';
     if($_REQUEST['command']=='add' && $_REQUEST['productid']>0){
     	$pid=$_REQUEST['productid'];	
     	$_SESSION['size'.$pid]=$_REQUEST['spsize']; 
