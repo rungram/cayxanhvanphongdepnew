@@ -1,0 +1,797 @@
+/*
+Compass Template
+http://www.templatemo.com/preview/templatemo_454_compass
+*/
+
+/* 
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*------------------------------------------------------
+	Basic Styling 
+--------------------------------------------------------*/
+body {
+  font-size:14px; font-family:Roboto; font-weight:500;
+  color: #333; line-height:25px; overflow-x:hidden
+}
+
+a {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+input::-moz-focus-inner {
+  border: 0;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto-2", sans-serif;
+  color: #fb8800;
+}
+
+.top-header .right-header ul.social-icons, .main-header .menu ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#services, #products, #about, #contact {
+  padding-top: 20px;
+}
+
+/*------------------------------------------------------
+	Header Styles 
+--------------------------------------------------------*/
+.site-header{}
+.top-header {
+  background:url(../images/bg.jpg) no-repeat left top; background-size:cover;
+  padding: 10px 0;
+}
+.top-header .left-header span {
+  display: inline-block;
+  margin: 8px 30px 0 0;
+}
+.top-header .left-header span i {
+  margin-right: 10px;
+}
+.top-header .right-header ul.social-icons li {
+  display: inline-block;
+}
+.top-header .right-header ul.social-icons li a {
+  color:#04ad50;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #04ad50;
+  -webkit-border-radius: 16px;
+  border-radius: 16px;
+  margin: 0 5px;
+}
+.top-header .right-header ul.social-icons li a:hover {
+  background-color:#04ad50;
+  color: #fff;
+}
+div.info_cty > h1{font-size:24px;  }
+div.info_cty > h2{color: #F00;font-size:19px; font-weight:bold}
+div.info_cty > h3{color: #00af50; }
+.hotline{ color:#f00; font-size:14px; font-weight:900}
+.main-header {
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  padding: 0px 0;
+}
+.main-header .logo {
+  margin-top: 5px;
+}
+.main-header .logo h1 {
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.main-header .logo h1 a {
+  color: #444444;
+}
+ul.nav.navbar-nav > li{border-right:1px #00ca5c solid !important; padding:0 0px;border-bottom:1px #039b49 solid}
+ul.dropdown-menu > li{border-bottom:1px #00ca5c solid } 
+.no-bor{border-bottom: none !important}
+.main-header .menu {
+  margin-top: 0px;
+}
+.main-header .menu ul li {
+  display: inline-block;
+  margin-left: 0px; border-right:1px #02a14b solid; vertical-align:middle; padding:10px 0px
+}
+.main-header .menu ul li a {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 16px; margin:22px 30px ;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; font-weight:700; background:none
+}
+.main-header .menu ul li a.current {
+  background: #e3722e;
+  color: white;
+}
+.navbar-nav > li > a{ font-size:15px !important}
+.main-header-shrink {
+  padding: 0px 0;
+  top: 0;
+}
+
+.responsive-menu {
+  position: relative;
+  top: 00px;
+}
+.responsive-menu .toggle-menu {
+  font-size: 30px;
+  color: #fff;
+}
+
+
+/*------------------------------------------------------
+	Basic Layout Styles 
+--------------------------------------------------------*/
+.title-section {
+  margin-top: 20px;
+}
+.title-section h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  display: block;
+  margin: 20px; font-family:Roboto-2; font-weight:900
+}
+.title-section span {
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: #e3722e;
+  margin: 0 auto;
+}
+
+.widget-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.mainBtn {
+  background-color: #e3722e;
+  color: white;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  font-weight: 600;
+  font-size: 14px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.mainBtn:hover {
+  background-color: #444444;
+}
+
+/*------------------------------------------------------
+	Services Styles 
+--------------------------------------------------------*/
+#services .service-item .service-header {
+  padding-bottom: 20px;
+  clear: both;
+}
+#services .service-item .service-header i {
+  color: #e3722e;
+  font-size: 24px;
+  float: left;
+  margin-right: 25px;
+}
+#services .service-item .service-header h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/*------------------------------------------------------
+	Portfolio Styles 
+--------------------------------------------------------*/
+#products {
+  padding-bottom: 20px;
+  margin-top: 20px;
+  background: #00b050;
+}
+#products .title-section h2 {
+  color: white;
+}
+#products .products-thumb {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px
+}
+#products .products-thumb img {
+  width: 100%;
+  height:200px;padding:10px 0  
+}
+#products .products-thumb img:hover { opacity:0.8
+}
+#products .products-thumb .overlay {
+  opacity: 0;
+  visibility: visible;
+  background: rgba(227, 114, 46, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+#products .products-thumb .overlay .inner {
+  position: absolute;
+  padding: 20px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+#products .products-thumb .overlay .inner h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+#products .products-thumb .overlay .inner h4 a {
+  color: white;
+}
+#products .products-thumb .overlay .inner span {
+  font-weight: 300;
+  color: white;
+}
+#products .products-thumb:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*#products-cata - Product background #fff */
+#products-cata {
+  padding-bottom: 20px;
+  margin-top: 20px;
+  background:#fff; color:#333;
+}
+#products-cata .title-section h2 {
+  color: #f60;
+}
+#products-cata .products-thumb {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px
+}
+#products-cata .products-thumb img {
+  width: 100%;
+  /*height:200px;*/padding:10px 0  
+}
+#products-cata .products-thumb img:hover { opacity:0.8
+}
+#products-cata .products-thumb .overlay {
+  opacity: 0;
+  visibility: visible;
+  background: rgba(227, 114, 46, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+#products-cata .products-thumb .overlay .inner {
+  position: absolute;
+  padding: 20px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: center; color:#333
+}
+#products-cata .products-thumb .overlay .inner h4 {
+  font-size: 18px;
+  margin-bottom: 10px; color:#333 !important
+}
+#products-cata .products-thumb .overlay .inner h4 a {
+  color: #333;
+}
+#products-cata .products-thumb .overlay .inner span {
+  font-weight: 300;
+  color: #333;
+}
+#products-cata .products-thumb:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+#products-cata .price{ color:#333; font-weight:bold; padding-right:10px; font-size:14px; text-transform:uppercase}
+
+#products-cata .price-off{ color:#333;font-size:14px;font-weight:bold; text-transform:uppercase}
+.mart-t30{ margin-top:30px}
+.mart-t50{ margin-top:50px}
+.sp{ padding-top:15px}
+.detailsp .btn{margin-top:15px;}
+#cart .page-cart nav .previous a, #cart .page-cart nav .next a {
+  background-color: #02a14b;
+  color: #fff;
+  display: inline-block;
+  font-size: 10pt;
+  font-weight: 600;
+  margin:15px 10px;
+  padding-top: 10px;
+  text-transform: uppercase; border: none; border-radius:2px; box-shadow:none !important
+}
+#cart .page-cart table.table tr .boxNumber button.btn {
+
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: #666;
+  border-image-repeat: stretch stretch;
+  border:1px #666 solid;
+
+}
+.input-group {
+  border-collapse: separate;
+  display: table;
+  position: relative;
+}
+.media-left, .media-right, .media-body {
+  display: table-cell;
+  vertical-align: top;
+}
+#cart .page-cart table.table tfoot tr td strong,.lblTotalPrice {
+  color: #ff4c4c; font-weight:bold;
+  font-size: 14pt;
+}
+#thanhtoan input{ width:100%}
+.small-img{ width:100px; float:left}
+#thanhtoan button a{ color:#fff}
+#thanhtoan td{ color:#333}
+/*------------------------------------------------------
+	About Styles 
+--------------------------------------------------------*/
+#about .progess-bars li .progress {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  background: #e6e6e6;
+  height: 30px;
+  margin-bottom: 15px;
+}
+#about .progess-bars li .progress-bar {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  line-height: 30px;
+  background: #e3722e;
+  text-transform: uppercase;
+}
+#news_home .news {
+  margin-top: 80px;
+}
+#news_home .news .news_item {
+  overflow: hidden;
+}
+#news_home .news_item .news-img img {
+  max-width: 100%;
+  position: relative;
+}
+#news_home .news_item .news-img img:hover{ border:1px #f57e00 solid;}
+#news_home .news .news_item .img_news img {
+  width:100%; max-width:100%;
+  max-height:200px; overflow:hidden
+}
+#news_home .news .news_item .news-img .overlay {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+#news_home .news .news_item .news-img .overlay .social {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#news_home .news .news_item .news-img .overlay .social li {
+  display: inline-block;
+  float: left;
+  margin-right: 1px;
+}
+#news_home .news .news_item .news-img .overlay .social li a {
+  display: block;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+#news_home .news .news_item .news-img .overlay .social li a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+#about .news .news_item .news-img:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+#news_home .news .news_item .inner-content {
+  background: whitesmoke;
+  border: 1px solid #d6d6d6;
+  border-top: 0;
+  padding: 20px;
+}
+#news_home .news .news_item .inner-content h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e3722e;
+  margin-bottom: 10px;
+}
+#news_home .news .news_item .inner-content span {
+  color: #9d9d9d;
+  margin-bottom: 15px;
+  display: block;
+}
+#news_home{ padding:20px;}
+.img_news{width:150px;}
+.img_news:hover{border:1px #f57e00 solid;}
+#moinhat.moinhat{ background:#00af50; color:#fff !important; margin:20px 0;}
+#moinhat h3{ color:#fff ;padding-top:15px; font-size:16px}
+#moinhat h3 a,#moinhat a{ color:#fff !important;}
+#news, #gioithieu,#dichvu{ margin-top:60px;}
+#detail-pro  { margin-top:80px;}
+#products-cata,#contact,#relate{ margin-top:40px;}
+#news .news_item .news-img img {
+  max-width: 100%; width:200px;
+  position: relative;
+}
+#dichvu img{  padding:0}
+#dichvu .col-lg-4{ padding:0 !important}
+#dichvu h3{ padding-top:15px}
+#dichvu p{ margin-bottom:15px}
+.dichvu{-webkit-box-shadow: 1px 10px 12px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 10px 12px -5px rgba(0,0,0,0.75);
+box-shadow: 1px 10px 12px -5px rgba(0,0,0,0.75); border:1px #ddd solid; margin-top:30px; margin-bottom:40px}
+.media{ margin-bottom:35px !important}
+.img_moinhat{ width:300px;}
+#services .service-item,#why .service-item{ text-align:center}
+#why { padding:20px; margin:10px 0; border:1px #EBD40A solid}
+h4.widget-title  { text-align:center}
+#why .service-item img{ height:90px; width:90px; border-radius:50%; border:2px #EBD40A solid}
+#services .service-item img{ height:150px; border-radius:5px; border:2px #ccc solid; margin-bottom:10px}
+#services .service-item img:hover{ border:2px #f57e00 solid;}
+.price{ color:#fff; font-weight:bold; padding-right:10px; font-size:14px; text-transform:uppercase}
+.price::before{ content:"Giá niêm yết: ";font-size:12px}
+.price-off{ color:#fff;font-size:14px;font-weight:bold; text-transform:uppercase}
+.price-off::before{content:"Giá đang KM: ";font-size:12px}
+
+#detail-pro,#thicong { margin-top:80px}
+
+#detail-pro .price {
+  color: #00af50;
+  font-weight:900; font-size:24px;
+}
+#detail-pro .price-off {
+  font-size: 20px;
+  margin-left: 25px;
+  text-decoration-style: solid; color:#f57e00
+}
+#detail-pro .button a{ color:#fff; }
+#detail-pro .btn{padding:5px; margin-bottom:3px}
+#detail-pro #dQy{ width:15%}
+#detail-pro .col-lg-6{ padding-left:0 !important}
+.detailsp{ margin-top:30px; padding-bottom:20px; -webkit-box-shadow: 1px 10px 12px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 10px 12px -5px rgba(0,0,0,0.75);
+box-shadow: 1px 10px 12px -5px rgba(0,0,0,0.75); border:1px #ddd solid;}
+.VAT::before{ content:".V.A.T: "; color:#00af50; padding-left:20px}
+.col-sp{width:19.5%; border:1px #fff solid;  margin:15px -1px 15px 0}
+#products .inner h4 a{ color:#fff !important; line-height:22px;}
+#products .inner h4 a:hover{ color:#ff0 !important}
+/*------------------------------------------------------
+	Contact Styles 
+--------------------------------------------------------*/
+#contact .contact-form .full-row {
+  width: 100%;
+  margin-bottom: 20px;
+}
+#contact .contact-form input, #contact .contact-form textarea {
+  outline: 0;
+  display: block;
+  border: 1px solid #cccccc;
+  width: 100%;
+  max-width: 100%;
+  padding: 8px 10px;
+  color: #777777;
+}
+#contact .contact-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+#contact .contact-form input.mainBtn {
+  display: inline-block;
+  width: auto;
+  border: 0;
+  padding: 10px 15px;
+  color: white;
+}
+#contact .map-holder {
+  padding: 5px;
+  background-color: white;
+  border: 1px solid #d6d6d6;
+}
+#contact .contact-info {
+  margin-top: 30px;
+}
+#contact .contact-info span {
+  margin-top: 20px;
+  display: block;
+  font-size: 14px;
+}
+#contact .contact-info span i {
+  color: #e3722e;
+  font-size: 16px;
+  margin-right: 12px;
+}
+
+.flexslider {
+  margin-top: 0px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  overflow: hidden;
+}
+
+.flex-direction-nav a {
+  color: #444444;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin: -20px 0 0 0;
+  text-align: center;
+  line-height: 40px;
+}
+
+.flex-caption {
+  position: absolute;
+  top: 76%;
+  width: 100%;
+  text-align: center;
+  z-index: 999;
+  color: white; background:#333; opacity:0.8; padding:20px 0 ;
+}
+.flex-caption h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 25px;
+}
+.flex-caption p {
+  font-size: 16px;
+  line-height: 25px;
+}
+.flex-caption span {
+  background: url(../images/slider-dec.png) no-repeat;
+  width: 60px;
+  height: 9px;
+  display: block;
+  margin: 30px auto;
+}
+
+/*------------------------------------------------------
+	Footer Styles 
+--------------------------------------------------------*/
+.site-footer {
+  margin-top: 50px;
+  background-color: #00af50;
+  color: white;
+  padding: 25px 0;
+}
+.site-footer h3{font-size:18px; color:#fff; text-transform:uppercase; font-weight:900}
+.site-footer p {
+  margin-top: 10px;
+}
+.site-footer a {
+  color: white;
+  display: block;
+}
+.site-footer .go-top {
+  float: right;
+  text-transform: uppercase;
+}
+.site-footer .go-top i {
+  display: block;
+}
+.site-footer ul li a{
+  background: url(../images/ar-news.png);
+  background-repeat: no-repeat;
+  background-size: auto auto; height:20px;
+  margin-bottom:10px;
+  padding-left: 25px;
+}
+.site-footer ul li a:hover{ color:#ff0 }
+.sf img{ float:left; height:30px; width:30px;}
+/********************************
+IPAD LANDSCAPE (1024x768)
+********************************/
+/********************************
+IPAD PORTRAIT (768x1024)
+********************************/
+@media only screen and (max-width: 960px) {
+  .flexslider {
+    margin-top: 100px;
+  }
+
+  .main-header {
+    padding: 0px 0;
+  }
+  .main-header .logo {
+    margin-top: 20px;
+  }
+
+  .service-item, .news_item {
+    margin-bottom: 50px;
+  }
+
+  .our-skills {
+    margin-top: 60px;
+  }
+
+  .flex-caption {
+    top: 20%;
+  }
+  .flex-caption h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .flex-caption p {
+    font-size: 14px;
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .left-header, .right-header {
+    text-align: center;
+  }
+  .col-sp{ width:50% !important}
+  #products .products-thumb img{ height:auto !important}
+}
+
+
+/********************************
+IPHONE 4-4S-5 LANDSCAPE (568x320)
+********************************/
+@media only screen and (max-width: 760px) {
+ 
+  .flex-caption {
+    display: none !important;
+  }
+
+  .contact-form {
+    margin-bottom: 60px;
+  }
+
+  .main-header {
+    height: 60px;
+  }
+  .main-header .logo {
+    margin: 0;
+  }
+
+  .flexslider {
+    margin-top: 60px;
+  }
+
+  .responsive-menu .menu {
+    top: 44px; width:120%; margin:0 -20px !important; padding:0 !important
+  }
+  .responsive-menu .menu ul { /*background:#000;*/ margin:0 -20px; border-right: none !important
+  }
+  .responsive-menu .menu ul li{border-right: none !important;width:100%;
+  }
+   .responsive-menu .menu ul li ul li{border-right: none !important;width:100%;
+  }
+  ul li ul li a{ margin-left:30px !important}
+  .col-sp{ width:100% !important}
+  #products .products-thumb img{ height:auto !important}
+}
+@media (max-width: 760px) {.sort,#dichvu a,.detail{ padding:10px;}
+div#detail-pro.row{ padding:10px !important; margin:0px !important}}
+}
+@media (max-width: 480px) {
+	.responsive-menu .menu {
+    top: 44px; width:120%; margin:0 -20px !important; padding:0 !important
+  }
+	.responsive-menu .menu ul { /*background:#000;*/ margin:0 -20px; border-right: none !important
+  }
+  .responsive-menu .menu ul li{border-right: none !important;width:100%;
+  }
+   .responsive-menu .menu ul li ul li{border-right: none !important;width:100%;
+  }
+}
+/********************************
+IPHONE 4-4S-5 PORTRAIT (320x568)
+********************************/
+.col-sp {
+        min-height: 330px !important;
+		overflow:hidden;
+}
