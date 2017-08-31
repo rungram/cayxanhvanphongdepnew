@@ -1,0 +1,1 @@
+<img src="<?=_upload_thuvienanh_l.$result_chitietanh[0]['photo']?>"  width="550" />
