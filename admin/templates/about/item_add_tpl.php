@@ -80,7 +80,12 @@ function get_main_category()
   <b>Danh mục :</b><?=get_main_category();?><br /><br />
   <b>Tên</b> <input type="text" name="ten_vi" value="<?=$item['ten_vi']?>" class="input" /><br /><br>
   <b>Tên tiếng anh</b> <input type="text" name="ten_en" value="<?=$item['ten_en']?>" class="input" /><br /><br>
-  
+  <?php if ($_REQUEST['act']=="capnhat")
+	{?>
+	<b>Hình hiện tại:</b><img src="<?=_upload_gioithieu.$item['thumb']?>"  width="120" alt="NO PHOTO" /><br />
+	<?php }?>
+	<b>Hình ảnh:</b> <input type="file" name="file" /><br />
+    <br />
  <b>Nội dung</b> <br /> 
     <textarea class="ckeditor" id="noidung_vi"  name="noidung_vi" cols="80" rows="5" ><?php echo (!empty($item['noidung_vi'])?$item['noidung_vi']:"")?>
     </textarea>

@@ -23,44 +23,52 @@
 			
 			$total_sp = count($result_spnam);
 ?>
-<div id="products-cata" class="section-content">
-  <div class="container">
-    <div class="title-section text-center">
-      <h2>Sản phẩm</h2>
-      <span></span></div>
-    <!-- /.title-section -->
-    <div class="row">
-      <!-- /.col-sp -->
-      <?php
-	for ($i=0;$i<count($result_spnam);$i++)
-	{ 
-	    $gia = (!empty($result_spnam[$i]['gia']))?number_format ($result_spnam[$i]['gia'],0,",",".")." vnđ":'Liên hệ cửa hàng hoặc nhân viên';
-	    
-	?>
-      <div class="col-sp col-sm-6">
-        <div class="products-thumb"> <img src="upload/sanpham/<?php if($result_spnam[$i]["tc_big"]==1) echo $result_spnam[$i]["photo"]; else echo $result_spnam[$i]["photo"] ?>" alt="<?=$result_spnam[$i]["ten_vi"]?>">
-          <div class="inner">
-            <h4><a href="chi-tiet-san-pham/<?=$result_spnam[$i]['tenkhongdau']?>-<?=$result_spnam[$i]['id']?>.html"><?=$result_spnam[$i]["ten_vi"]?></a></h4>
-            <p><span class="price"><?php echo $gia;?></span><br>
-            <?php if(!empty($result_spnam[$i]['giagiam'])){?>
-              <span class="price-off"><?php echo number_format ((!empty($result_spnam[$i]['giagiam']))?$result_spnam[$i]['giagiam']:$result_spnam[$i]['gia'],0,",",".")." vnđ";?></span></p>
-            <?php }?>
-          </div>
-        </div>
-        <!-- /.products-thumb -->
-      </div>
-  <?php
-	} 
-	?>
-    </div>
-    <!-- /.row -->
-  </div>
-  <!-- /.container -->
-  <hr>
-  <div class="text-center">
-                    <ul class="pagination">
-                          <?=$paging['paging']?></div>
-                     </ul>
-  </div>  
+<div id="wrapper">
+        <div class="">
+            <div id="pathway" class="clearfix">
+                <div class="container">
+                    <div id="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 
-</div>
+                        <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                            <a href="index.html" itemprop="item"><span itemprop="name" class="hidden-xs">Trang chủ</span></a><meta itemprop="position" content="1">
+                        </span> 	
+                        <span class="hidden-xs">→</span>
+                        <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                            <a itemprop="item"><span itemprop="name"><?=$result_laylist["ten_vi"]?></span></a>
+                            <meta itemprop="position" content="2">
+                        </span>
+                    </div><!-- #breadcrumbs -->
+                </div>
+            </div>
+            <div class="container">
+                <div id="main">
+                    <div id="main-content">
+                        <div class="widget_product ">
+                          <!-- banner image -->
+                          <div class="box-heading">
+                            <h4 class="title"><a href="cay-cong-trinh/index.html" title="Cây công trình"><?=$result_laylist["ten_vi"]?></a></h4>
+                          </div>
+                          <div class="box-content">
+                          <?php
+                        	for ($i=0;$i<count($result_spnam);$i++)
+                        	{ 
+                        	    $gia = (!empty($result_spnam[$i]['gia']))?number_format ($result_spnam[$i]['gia'],0,",",".")."&nbsp;₫":'Gọi để biết giá';
+                        	    
+                        	?>
+                              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 product-block"> <a href="chi-tiet-san-pham/<?=$result_spnam[$i]['tenkhongdau']?>-<?=$result_spnam[$i]['id']?>.html" title="<?=$result_spnam[$i]["ten_vi"]?>"> <img src="upload/sanpham/<?php if($result_spnam[$i]["tc_big"]==1) echo $result_spnam[$i]["photo"]; else echo $result_spnam[$i]["photo"] ?>" class="img-responsive wp-post-image" alt="<?=$result_spnam[$i]["ten_vi"]?>" itemprop="image"> </a>
+                                  <h4 class="product-name"><a href="chi-tiet-san-pham/<?=$result_spnam[$i]['tenkhongdau']?>-<?=$result_spnam[$i]['id']?>.html" title="<?=$result_spnam[$i]["ten_vi"]?>"><?=$result_spnam[$i]["ten_vi"]?></a></h4>
+                                  <span class="price"><span class="amount"><?php echo $gia;?></span></span>
+                                  <button type="submit" class="single_add_to_cart_button button alt btn btn-link">Thêm vào giỏ</button>
+                              </div>
+                          <?php
+                        	} 
+                        	?>
+                          </div>
+                        </div>
+                      </div>
+                    <?php include _template."layout/menu_right.php"; ?>
+
+                </div>
+            </div>
+        </div>
+    </div>

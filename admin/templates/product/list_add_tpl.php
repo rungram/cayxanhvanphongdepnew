@@ -23,6 +23,7 @@ $_SESSION['_baseUrl1'] = $baseUrl1;
     <b>Số thứ tự</b> <input type="text" name="stt" value="<?=isset($item['stt'])?$item['stt']:1?>" style="width:30px"><br>
 <b>Nổi bật</b> <input type="checkbox" name="noibat" <?=(!isset($item['noibat']) || $item['noibat']==1)?'checked="checked"':''?>><br />
 	<b>Hiển thị</b> <input type="checkbox" name="hienthi" <?=(!isset($item['hienthi']) || $item['hienthi']==1)?'checked="checked"':''?>><br />
+	<b>Menu right</b> <input type="checkbox" name="menuright" <?=($item['menuright']==1)?'checked="checked"':''?>><br /> 
 	<b>Loại menu</b>
 	<select name="menutype" id="menutype" class="main_font">
 	<?php 

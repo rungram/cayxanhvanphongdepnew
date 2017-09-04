@@ -270,6 +270,7 @@ function save_item(){
 		$data['baohanh'] = $_POST['baohanh'];
 		$data['trinhtrang'] = $_POST['trinhtrang'];
 		$data['xuatxu'] = $_POST['xuatxu'];
+		$data['nhacungcap'] = $_POST['nhacungcap'];
 		$data['vanchuyen'] = $_POST['vanchuyen'];
 		$data['masp'] = $_POST['masp'];	
 		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);	
@@ -318,7 +319,8 @@ function save_item(){
 		$data['tinh_trang'] = $_POST['tinh_trang'];
 		$data['xuatxu'] = $_POST['xuatxu'];
 		$data['vanchuyen'] = $_POST['vanchuyen'];
-		$data['masp'] = $_POST['masp'];	
+		$data['masp'] = $_POST['masp'];
+		$data['nhacungcap'] = $_POST['nhacungcap'];
 		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);	
 		$data['video_hinh'] = $_POST['video_hinh'];	
 		$data['gia'] = (int)$_POST['gia'];	
@@ -816,6 +818,7 @@ function save_list(){
 		$data['mota_vi'] = $_POST['mota_vi'];
 		$data['noibat'] = isset($_POST['noibat']) ? 1 : 0;
 		$data['menutype'] = $_POST['menutype'];
+		$data['menuright'] = isset($_POST['menuright']) ? 1 : 0;
 		$d->setTable('product_list');
 		$d->setWhere('id', $id);
 		if($d->update($data))
@@ -840,6 +843,7 @@ function save_list(){
 		$data['noidung_vi'] = addslashes($_POST['noidung_vi']);
 		$data['noibat'] = isset($_POST['noibat']) ? 1 : 0;
 		$data['menutype'] = $_POST['menutype'];
+		$data['menuright'] = isset($_POST['menuright']) ? 1 : 0;
 		$d->setTable('product_list');
 		if($d->insert($data))
 			redirect("index.php?com=product&act=man_list");

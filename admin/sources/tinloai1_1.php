@@ -220,6 +220,11 @@ function save_item(){
 		$data['gioithieu'] = isset($_POST['gioithieu']) ? 1 : 0;
 		$data['tuvan_thietke'] = isset($_POST['tuvan_thietke']) ? 1 : 0;
 		$data['thicong'] = isset($_POST['thicong']) ? 1 : 0;
+		$data['dichvu'] = isset($_POST['dichvu']) ? 1 : 0;
+		$data['huongdan'] = isset($_POST['huongdan']) ? 1 : 0;
+		$data['congty'] = isset($_POST['congty']) ? 1 : 0;
+		$data['menuright'] = isset($_POST['menuright']) ? 1 : 0;
+		$data['hienngonngu'] = (int)$_POST['hienngonngu'];
 		$d->setTable('tinloai1_1');
 		$d->setWhere('id', $id);
 		if($d->update($data))
@@ -250,6 +255,11 @@ function save_item(){
 		$data['gioithieu'] = isset($_POST['gioithieu']) ? 1 : 0;
 		$data['tuvan_thietke'] = isset($_POST['tuvan_thietke']) ? 1 : 0;
 		$data['thicong'] = isset($_POST['thicong']) ? 1 : 0;
+		$data['dichvu'] = isset($_POST['dichvu']) ? 1 : 0;
+		$data['huongdan'] = isset($_POST['huongdan']) ? 1 : 0;
+		$data['congty'] = isset($_POST['congty']) ? 1 : 0;
+		$data['menuright'] = isset($_POST['menuright']) ? 1 : 0;
+		$data['hienngonngu'] = (int)$_POST['hienngonngu'];
 		$d->setTable('tinloai1_1');
 		if($d->insert($data))
 		{			

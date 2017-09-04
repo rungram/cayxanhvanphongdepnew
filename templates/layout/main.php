@@ -31,6 +31,24 @@
 	$result_detailq=$d->result_array();
 	
 	$d->reset();
+	$sql_detailq="select * from #_tinloai1_1 where hienthi = 1 and dichvu = 1 order by id limit 6";
+	$d->query($sql_detailq);
+	$result_tindichvu=$d->result_array();
+	
+	
+	$d->reset();
+	$sql_detailq="select * from #_tinloai1_1 where hienthi = 1 and congty = 1 order by id limit 6";
+	$d->query($sql_detailq);
+	$result_tincongty=$d->result_array();
+	
+	
+	$d->reset();
+	$sql_detailq="select * from #_tinloai1_1 where hienthi = 1 and huongdan = 1 order by id limit 6";
+	$d->query($sql_detailq);
+	$result_tinhuongdan=$d->result_array();
+	
+	
+	$d->reset();
 	$sql_detaitvtk="select * from #_tinloai1_1 where tuvan_thietke = 1 and hienthi = 1 order by id limit 4";
 	$d->query($sql_detaitvtk);
 	$result_detaitvtk=$d->result_array();

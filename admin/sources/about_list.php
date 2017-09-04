@@ -103,10 +103,11 @@ function save_gioithieu(){
     	$data['mota_cn'] = $_POST['mota_cn'];
     	$data['link'] = $_POST['link'];
     	$data['noidung_vi'] = $_POST['noidung_vi'];
-    	$data['noidung_en'] = $_POST['noidung_en'];
+    	$data['noidung_en'] = !empty(($_POST['noidung_en'])) ? $_POST['noidung_en'] : $_POST['noidung_vi'];
     	$data['noidung_cn'] = $_POST['noidung_cn'];
     	$data['trangchu'] = isset($_POST['trangchu']) ? 1 : 0;
     	$data['trangcon'] = isset($_POST['trangcon']) ? 1 : 0;
+    	$data['ngaytao'] = lay_thoigian();
     	$d->reset();
     	$d->setTable('gioithieu_list');
     	$d->setWhere('id', $id);
@@ -133,11 +134,12 @@ function save_gioithieu(){
 	    $data['mota_cn'] = $_POST['mota_cn'];
 	    $data['link'] = $_POST['link'];
 	    $data['noidung_vi'] = $_POST['noidung_vi'];
-	    $data['noidung_en'] = $_POST['noidung_en'];
+	    $data['noidung_en'] = !empty(($_POST['noidung_en'])) ? $_POST['noidung_en'] : $_POST['noidung_vi'];
 	    $data['noidung_cn'] = $_POST['noidung_cn'];
 	    $data['trangchu'] = isset($_POST['trangchu']) ? 1 : 0;
 	    $data['trangcon'] = isset($_POST['trangcon']) ? 1 : 0;
 	    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
+	    $data['ngaytao'] = lay_thoigian();
 	    $d->reset();
 	    $d->setTable('gioithieu_list');
 	    if($d->insert($data))

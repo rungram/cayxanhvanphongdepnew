@@ -17,45 +17,60 @@
 	
 }
 ?>
-<div id="thanhtoan" class="container mart-t50">
-    <div class="title-section text-center">
-      <h2>Thanh toán</h2>
-      <span></span>
-    </div>
-    <!-- /.title-section -->	
-    <form method="post" name="frm" action="gui-don-hang.html" enctype="multipart/form-data">
-	   <div class="row mart-t50">
-	
-                <div class="col-md-6 col-sm-6">
-                    <div class="contact-form">
-                        <p class="full-row">
-                            <label class="col-lg-4" for="name-id">Họ tên (*):</label>
-                            <span class="col-lg-8 form-group"><input type="text" id="name-id" name="hoten2" required="required"></span>
-                        </p>
-                        <p class="full-row">
-                            <label class="col-lg-4" for="email-id">Email (*):</label>
-                            <span class="col-lg-8 form-group"><input type="text" id="email-id" name="email" required="required"></span>
-                        </p>
-                        <p class="full-row">
-                            <label class="col-lg-4" for="subject-id">Điện thoại (*):</label>
-                            <span class="col-lg-8 form-group"><input type="text" id="subject-id" name="dienthoai" required="required"></span>
-                        </p>
-                        <p class="full-row">
-                            <label class="col-lg-4" for="message">Địa chỉ giao hàng (*):</label>
-                             <span class="col-lg-8 form-group"><input type="text" id="add-id" name="diachi" required="required"></span>
-                        </p>
-                        <p class="full-row">
-                            <label class="col-lg-4" for="message">Ghi chú</label>
-                             <span class="col-lg-8 form-group"><textarea style="width: 100%;" name="noidung" type="text" id="add-id" ></textarea></span>
-                        </p>
+<div id="wrapper">
+                <div class="">
+                    <div id="pathway" class="clearfix">
+                        <div class="container">
+                            <div id="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+
+                                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                    <a href="http://chohoaviet.com" itemprop="item"><span itemprop="name" class="hidden-xs">Trang chủ</span></a><meta itemprop="position" content="1">
+                                </span> 	
+                                <span class="hidden-xs">→</span>
+                                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                    <a href="san-pham.html" itemprop="item"><span itemprop="name">Thanh toán</span></a>
+                                    <meta itemprop="position" content="2">
+                                </span>
+                            </div><!-- #breadcrumbs -->
+                        </div>
                     </div>
-                </div> <!-- /.col-md-6 -->
-           
-                <div class="col-md-6 col-sm-6">
-                	<div class="table-responsive" id="no-more-tables"> 
-                        <table class="table table-hover table-vcenter table-bordered"> 
-                            <tbody> 
-                            <?php
+                    <div class="container">
+                            
+                           <div class="box-heading">
+                                        <h4 class="title">Thanh toán</h4>
+                           </div>
+                           <div id="thanhtoan">
+                        <form method="post" name="frm" action="gui-don-hang.html" enctype="multipart/form-data">
+                        <div class="row mart-t50">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="contact-form">
+                                    <p class="full-row">
+                                        <label class="col-lg-5" for="name-id">Họ tên:</label>
+                                        <span class="col-lg-7 form-group"><input id="name-id" name="hoten2" type="text"></span>
+                                    </p>
+                                    <p class="full-row">
+                                        <label class="col-lg-5" for="email-id">Email:</label>
+                                        <span class="col-lg-7 form-group"><input id="email-id" name="email" type="text"></span>
+                                    </p>
+                                    <p class="full-row">
+                                        <label class="col-lg-5" for="subject-id">Điện thoại (*):</label>
+                                        <span class="col-lg-7 form-group"><input id="subject-id" name="dienthoai" type="text"></span>
+                                    </p>
+                                    <p class="full-row">
+                                        <label class="col-lg-5" for="message">Địa chỉ giao hàng (*):</label>
+                                        <span class="col-lg-7 form-group"><input id="add-id" name="diachi" type="text"></span>
+                                    </p>
+                                    <p class="full-row">
+                                        <label class="col-lg-5" for="message">Ghi chú</label>
+                                         <span class="col-lg-7 form-group"><textarea style="width: 100%;" name="noidung" type="text" id="add-id" ></textarea></span>
+                                    </p>
+                                </div>
+                            </div> <!-- /.col-md-6 -->
+                            <div class="col-md-6 col-sm-6">
+                                <div class="table-responsive" id="no-more-tables">
+                                    <table class="table table-hover table-vcenter table-bordered">
+                                        <tbody>
+                                         <?php
                             $max=count($_SESSION['cart']);
                             $ship = 0;
                             $vat = 0;
@@ -99,9 +114,9 @@
                                 <?php
                                 	}
                                 ?>
-                            </tbody>  
-                            <tfoot> 
-                                 <tr> 
+                                        </tbody>
+                                        <tfoot>
+                                            <tr> 
                                      <td colspan="2" class="text-right text-primary" style="white-space:nowrap;font-weight:700;">  Thành tiền: <strong class="lblTotal" data-total="180000"><?= number_format( get_ordersale_total($pid)+$row_setting['phivc'],0, ',', '.').'đ';?></strong> 
                                      </td>
                                  </tr>
@@ -125,13 +140,16 @@
                                  </tr>
 
 
-                                
-                            </tfoot>  
-                        </table> 
-                	</div>
-                    <p class="clearfix"></p>
-                    <button class="btn btn-primary"> <a><i class="glyphicon glyphicon-shopping-cart"></i> Đặt hàng </a> </button>
-                </div> <!-- /.col-md-6 -->
-            </div>	
-         </form>
-</div>
+
+                                        </tfoot>
+                                    </table>
+                                </div>
+                                <p class="clearfix"></p>
+                                <a><button class="btn btn-cart"> <i class=" fa fa-cart-plus"></i> Đặt hàng  </button></a>
+                            </div> <!-- /.col-md-6 -->
+                        </div>
+                    </form>
+                    </div>
+                    </div>
+                </div>
+            </div>

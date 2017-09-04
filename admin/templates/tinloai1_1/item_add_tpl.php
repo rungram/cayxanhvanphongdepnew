@@ -133,22 +133,76 @@ function get_main_cat()
 	<?php }?>
 	<b>Hình ảnh:</b> <input type="file" name="file" /> <?=_tinloai1_1_type?><br />
     <br />
-    <b>Tiêu đề</b> <input type="text" name="ten_vi" value="<?=$item['ten_vi']?>" class="input" /><br />     
+    <b>Tiêu đề</b> <input type="text" name="ten_vi" value="<?=$item['ten_vi']?>" class="input" /><br />   
+    <b>Tiêu đề tiếng anh</b> <input type="text" name="ten_en" value="<?=$item['ten_en']?>" class="input" /><br />     
     <b>Tóm tắt </b> <br/>
     <textarea class="ckeditor"  name="mota_vi" cols="100" rows="6" class="input"><?=$item['mota_vi']?>
     </textarea>
-    <br />     
+    <br />    
+    <b>Tóm tắt tiếng anh </b> <br/>
+    <textarea class="ckeditor"  name="mota_en" cols="100" rows="6" class="input"><?=$item['mota_en']?>
+    </textarea>
+    <br />      
   <b>Nội dung </b><br/>
 	<div>
 	 <textarea class="ckeditor"  name="noidung_vi" id="noidung_vi"><?=$item['noidung_vi']?></textarea></div>
     <br /> 
-     
+  <b>Nội dung tiếng anh</b><br/>
+	<div>
+	 <textarea class="ckeditor"  name="noidung_en" id="noidung_en"><?=$item['noidung_en']?></textarea></div>
+    <br />    
     <b>Số thứ tự</b> <input type="text" name="stt" value="<?=isset($item['stt'])?$item['stt']:1?>" style="width:30px"><br>
     <br />  
    	<b>Hiển thị</b> <input type="checkbox" name="hienthi" <?=(!isset($item['hienthi']) || $item['hienthi']==1)?'checked="checked"':''?>><br /> 
 	
-	<b>Tư vấn - Thiết Kế</b> <input type="checkbox" name="tuvan_thietke" <?=($item['tuvan_thietke']==1)?'checked="checked"':''?>><br /> 
-	<b>Thi công</b> <input type="checkbox" name="thicong" <?=($item['thicong']==1)?'checked="checked"':''?>><br /> 
+	<b>Dịch vụ</b> <input type="checkbox" name="dichvu" <?=($item['dichvu']==1)?'checked="checked"':''?>><br /> 
+	<b>Hướng dẫn</b> <input type="checkbox" name="huongdan" <?=($item['huongdan']==1)?'checked="checked"':''?>><br /> 
+	<b>Công ty</b> <input type="checkbox" name="congty" <?=($item['congty']==1)?'checked="checked"':''?>><br /> 
+	<b>Menu right</b> <input type="checkbox" name="menuright" <?=($item['menuright']==1)?'checked="checked"':''?>><br /> 
+	<b>Chọn ngôn ngữ</b>  
+    <select id="hienngonngu" name="hienngonngu" class="main_font">
+    <?php
+    if((int)$item["hienngonngu"]==1) 
+    {
+    ?>
+        <option value="3">Cả hai</option>
+        <option value="1" selected>Tiếng Việt</option>
+        <option value="2">Tiếng Anh</option>
+    <?php 
+    }
+    ?>
+    <?php
+    if((int)$item["hienngonngu"]==2) 
+    {
+    ?>
+        <option value="3">Cả hai</option>
+        <option value="1">Tiếng Việt</option>
+        <option value="2" selected>Tiếng Anh</option>
+    <?php 
+    }
+    ?>
+    <?php
+    if((int)$item["hienngonngu"]==3) 
+    {
+    ?>
+        <option value="3" selected>Cả hai</option>
+        <option value="1">Tiếng Việt</option>
+        <option value="2">Tiếng Anh</option>
+    <?php 
+    }
+    ?>
+    <?php
+    if(!isset($item['hienngonngu'])) 
+    {
+    ?>
+        <option value="3" selected>Cả hai</option>
+        <option value="1">Tiếng Việt</option>
+        <option value="2">Tiếng Anh</option>
+    <?php 
+    }
+    ?>
+	</select>
+	<br /><br />
 	<input type="hidden" name="id" id="id" value="<?=@$item['id']?>" />
 	<input type="submit" value="Lưu" class="btn" />
 	<input type="button" value="Thoát" onclick="javascript:window.location='index.php?com=tinloai1_1&act=man'" class="btn" />

@@ -165,9 +165,9 @@ $mail->SMTPSecure = 'ssl'; // sử dụng giao thức SSL vì gmail bắt buộc
 
 $mail->Host = 'smtp.gmail.com';
 $mail->Port = 465; 
-$mail->Username = "ctykythuatkimthinhphat@gmail.com";  
-$mail->Password = "Kimthinhphat";           
-$mail->SetFrom($from, 'CÔNG TY TNHH KỸ THUẬT KIM THỊNH PHÁT');
+$mail->Username = "info.cayxanhvanphongdep@gmail.com";  
+$mail->Password = "Kcdagtemyatpxh1";           
+$mail->SetFrom($from, 'CÂY XANH VĂN PHÒNG ĐẸP');
 $mail->From = $from;		
 
 $mail->Subject = $subject;
@@ -175,7 +175,7 @@ $mail->Body = $body;
 $mail->AddAddress($to);
 
 // $mail->AddReplyTo($email,"Thông tin phản hồi.");// Ấn định email sẽ nhận khi người dùng reply lại.
-$mail->AddCC('homedecor.info.vn@gmail.com',"Thông tin đơn hàng khách đặt.");// Ấn định email sẽ nhận khi người dùng reply lại.
+$mail->AddCC('info.cayxanhvanphongdep@gmail.com',"Thông tin đơn hàng khách đặt.");// Ấn định email sẽ nhận khi người dùng reply lại.
 $mail->WordWrap = 50; // set word wrap   
 $mail->IsHTML(true); // send as HTML
 //Thiết lập định dạng font chữ

@@ -3,7 +3,7 @@
 <?php $i=0;?>	
     <b>Hình ảnh <?=$i+1?></b> <input type="file" name="file<?=$i?>" /> <strong>.jpg&nbsp;|&nbsp;.gif&nbsp;|&nbsp;png </strong><br />
     <br />
-	<b>Link: </b> <input name="mota<?=$i?>" type="text" size="40"   />	
+	<b>Link: </b> <input name="link<?=$i?>" type="text" size="40"   />	
 	<br />
     <br />
     

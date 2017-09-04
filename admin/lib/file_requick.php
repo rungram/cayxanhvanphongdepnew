@@ -31,6 +31,9 @@
 		case 'intro':
 			$template ="intro";
 			break;
+		case 'gioi-thieu-list':
+		    $template = "about_list";
+		    break;
 		case 'gioi-thieu':
 		    $template = "about";
 		    break;

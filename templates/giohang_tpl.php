@@ -39,34 +39,50 @@ if($_REQUEST['command']=='delete' && $_REQUEST['pid']>0){
 	}
 </script>
 
-<div id="cart" class="container mart-t50">
-    <div class="title-section text-center">
-      <h2>Thanh toán</h2>
-      <span></span>
-    </div>
-    <!-- /.title-section -->	
-	<article class="page-cart" id="boxContent"> 
-    <form name="formgiobo" method="post"> 
-    <input type="hidden" name="pid" />
+<div id="wrapper">
+                <div class="">
+                    <div id="pathway" class="clearfix">
+                        <div class="container">
+                            <div id="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+
+                                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                    <a href="index.html" itemprop="item"><span itemprop="name" class="hidden-xs">Trang chủ</span></a><meta itemprop="position" content="1">
+                                </span> 	
+                                <span class="hidden-xs">→</span>
+                                <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                    <a href="san-pham.html" itemprop="item"><span itemprop="name">Giỏ hàng</span></a>
+                                    <meta itemprop="position" content="2">
+                                </span>
+                            </div><!-- #breadcrumbs -->
+                        </div>
+                    </div>
+                    <div class="container">
+                            
+                           <div class="box-heading">
+                                        <h4 class="title">Giỏ hàng</h4>
+                           </div>
+                           <article class="page-cart" id="boxContent"> 
+          <form name="formgiobo" method="post"> 
+          <input type="hidden" name="pid" />
 		<input type="hidden" name="command" />
-        <div class="page-content">
-             <div class="alert alert-success hidden" role="alert">
-             </div> 
-             <div class="table-responsive" id="no-more-tables">  
-                 <table class="table table-hover table-vcenter"> 
-                     <thead> 
-                         <tr>
-                             <th class="text-left text-capitalize" style="width:160px;">  Sản phẩm </th>
-                             <th class="text-center text-capitalize" style="width:120px;"> Đơn giá </th>
-                             <th class="text-center text-capitalize" style="width:40px;">  Số lượng </th>
-                             <th class="text-center text-capitalize" style="width:80px;">  VAT </th>
-                             <th class="text-center text-capitalize" style="width:80px;">  Phí vận chuyển (1 đơn vị)</th>
-                             <th class="text-center text-capitalize" style="width:120px;">  Thành tiền </th>
-                             <th class="text-center" style="width:40px;"> </th>
-                         </tr> 
-                     </thead> 
-                     <tbody> 
-                     <?php
+            <div class="page-content">
+                 <div class="alert alert-success hidden" role="alert">
+                 </div> 
+                 <div class="table-responsive" id="no-more-tables">  
+                     <table class="table table-hover table-vcenter"> 
+                         <thead> 
+                             <tr>
+                                 <th class="text-left text-capitalize">  Sản phẩm </th>
+                                 <th class="text-center text-capitalize" style="width:120px;"> Đơn giá </th>
+                                 <th class="text-center text-capitalize" style="width:80px;">  Số lượng </th>
+                                 <th class="text-center text-capitalize" style="width:80px;">  VAT </th>
+                                <th class="text-center text-capitalize" style="width:80px;">  Phí vận chuyển (1 đơn vị)</th>
+                                 <th class="text-center text-capitalize" style="width:120px;">  Thành tiền </th>
+                                 <th class="text-center" style="width:40px;"> </th>
+                             </tr> 
+                         </thead> 
+                         <tbody> 
+                             <?php
                      $ship = 0;
                      $vat = 0;
                 		if(is_array($_SESSION['cart'])){
@@ -146,8 +162,8 @@ if($_REQUEST['command']=='delete' && $_REQUEST['pid']>0){
                          <?php		 
                     		}}
                     		?>
-                     </tbody>  
-                     <tfoot> 
+                         </tbody>  
+                         <tfoot> 
                          <tr>
                              <td colspan="5" class="text-right"> V.A.T </td>
                              <td class="text-right"> 
@@ -174,11 +190,11 @@ if($_REQUEST['command']=='delete' && $_REQUEST['pid']>0){
                              <td class="text-right"> <strong class="lblTotal"><?= number_format( get_ordersale_total($pid)+$row_setting['phivc'],0, ',', '.').'đ';?></strong> </td>
                              <td></td>
                          </tr> 
-                     </tfoot> 
-                 </table> 
-             </div> 
-             <nav> 
-             <ul class="pager"> 
+                     </tfoot>  
+                     </table> 
+                 </div> 
+                 <nav> 
+                 <ul class="pager"> 
                  <li class="previous"><a href="san-pham.html"><span aria-hidden="true">←</span> Tiếp tục mua hàng</a></li>  
                  <?php if(count($_SESSION['cart'])>0)
                      {?>
@@ -186,11 +202,13 @@ if($_REQUEST['command']=='delete' && $_REQUEST['pid']>0){
                  <li class="next"><a href="javascript:;" onclick="return UpdateCart();"> <i class="fa fa-save"></i> Cập nhật giỏ hàng</a></li>  
                  <?php }?>
                  
-             </ul> 
-             </nav>  
-             <span style="font-size:16px;"></span> 
-             <div class="clearfix"></div> 
-        </div> 
- 	</form> 
-    </article>	
+             </ul>
+                 </nav>  
+                 <span style="font-size:16px;"></span> 
+                 <div class="clearfix"></div> 
+            </div> 
+ 	    </form> 
+               </article>
+        </div>
+    </div>
 </div>

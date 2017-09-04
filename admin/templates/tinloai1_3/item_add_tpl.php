@@ -1,3 +1,11 @@
+<?php
+$baseUrl1 = '../Scripts/ckeditor_upload/';
+$_SESSION['_baseUrl1'] = $baseUrl1; 
+?>
+<script language="javascript">
+	var _baseUrl1 = '../Scripts/';
+</script>
+<script src="../Scripts/ckeditor/ckeditor.js" type="text/javascript"></script>
 <script type="text/javascript">
 	tinyMCE.init({
 		// General options
@@ -85,17 +93,16 @@ function get_main_list()
 
 <form name="frm" method="post" action="index.php?com=tinloai1_3&act=save&curPage=<?=$_REQUEST['curPage']?>" enctype="multipart/form-data" class="nhaplieu">
    
-
-    <b>Tên tin</b> <input type="text" name="ten_vi" value="<?=$item['ten_vi']?>" class="input" /><br />     
-   
     <b>Nội dung </b><br/>
 	<div>
-	 <textarea name="noidung_vi" id="noidung_vi"><?=$item['noidung_vi']?></textarea></div>
+	 <textarea class="ckeditor"  name="noidung_vi" id="noidung_vi"><?=$item['noidung_vi']?></textarea></div>
     <br /> 
+  <b>Nội dung tiếng anh</b><br/>
+	<div>
+	 <textarea class="ckeditor"  name="noidung_en" id="noidung_en"><?=$item['noidung_en']?></textarea></div>
+    <br />    
     
-    <b>Số thứ tự</b> <input type="text" name="stt" value="<?=isset($item['stt'])?$item['stt']:1?>" style="width:30px"><br>
-    <br />  
-   	<b>Hiển thị</b> <input type="checkbox" name="hienthi" <?=(!isset($item['hienthi']) || $item['hienthi']==1)?'checked="checked"':''?>><br /> 
+    
 	<input type="hidden" name="id" id="id" value="<?=@$item['id']?>" />
 	<input type="submit" value="Lưu" class="btn" />
 	<input type="button" value="Thoát" onclick="javascript:window.location='index.php?com=tinloai1_3&act=man'" class="btn" />

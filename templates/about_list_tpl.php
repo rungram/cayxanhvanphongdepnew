@@ -3,23 +3,26 @@
 		$id =	addslashes($_GET['id']);
 		
 		$d->reset();
-		$sql_tanglx="update	#_tinloai1_1 set luotxem=luotxem+1 where id='$id'";
+		$sql_tanglx="update  #_gioithieu_list set luotxem=luotxem+1 where id='$id'";
 		$d->query($sql_tanglx);
-		$result_detail="select * from #_tinloai1_1 where id='$id'";
+		
+		$d->reset();
+// 		$sql_tanglx="update	#_tinloai1_1 set luotxem=luotxem+1 where id='$id'";
+// 		$d->query($sql_tanglx);
+		$result_detail="select * from #_gioithieu_list  where id='$id' order by stt desc limit 1";
 		$d->query($result_detail);	
 		$result_detail=$d->fetch_array();
+		//$id = $result_detail["id"];
 
-
-		$sql_tinll="select * from #_tinloai1_1_list where hienthi =1 order by stt asc";
+		$sql_tinll="select * from #_gioithieu_list where hienthi =1 order by stt asc";
 		$d->query($sql_tinll);	
 		$result_detaill=$d->result_array(); 
 		
-		$id_list = $result_detail['id_list'];
+		
 		$d->reset();
-		$sql_tinll="select * from #_tinloai1_1 where id<>'$id' and id_list ='$id_list' and hienthi =1 order by id desc limit 3";
-		$d->query($sql_tinll); 
+		$result_detailq="select * from #_gioithieu_list where hienthi =1 and	id<>'$id' order by luotxem desc limit 3";
+		$d->query($result_detailq); 
 		$result_detailq=$d->result_array();
-
 		$curPage = isset($_GET['p']) ? $_GET['p'] : 1;
 		$url=getCurrentPageURL();
 		$maxR=4;
@@ -82,8 +85,8 @@
                          ?>
                          <div class="col-md-4 col-sm-6">
                                 <div class="hentry post-item">
-                                    <a href="tin-tuc-detail/<?=$result_detailq[$i]['tenkhongdau']?>-<?=$result_detailq[$i]['id']?>.html" rel="bookmark"><img src="<?=_upload_tinloai1_1_l.$result_detailq[$i]['thumb']?>" class="img-responsive wp-post-image" alt="<?=$result_detailq[$i]['ten_vi']?>"></a>
-                                    <h4 class="entry-title"><a title="<?=$result_detailq[$i]['ten_vi']?>" href="tin-tuc-detail/<?=$result_detailq[$i]['tenkhongdau']?>-<?=$result_detailq[$i]['id']?>.html"><?=$result_detailq[$i]['ten_vi']?></a></h4>
+                                    <a href="gioi-thieu-list/<?=$result_detailq[$i]['tenkhongdau']?>-<?=$result_detailq[$i]['id']?>.html" rel="bookmark"><img src="<?=_upload_gioithieu_l.$result_detailq[$i]['thumb']?>" class="img-responsive wp-post-image" alt="<?=$result_detailq[$i]['ten_vi']?>"></a>
+                                    <h4 class="entry-title"><a title="<?=$result_detailq[$i]['ten_vi']?>" href="gioi-thieu-list/<?=$result_detailq[$i]['tenkhongdau']?>-<?=$result_detailq[$i]['id']?>.html"><?=$result_detailq[$i]['ten_vi']?></a></h4>
                                     <div class="entry-meta hidden">
                                         <time class="meta-date updated" datetime="2017-02-05T21:47:35+00:00"><?=$result_detailq[$i]['ngaytao']?></time> <span class="p-author author h-card" itemprop="author">quantri</span>
                                     </div><!-- .entry-meta -->
