@@ -180,7 +180,7 @@
       <div class="widget-cart">
             <i class="fa fa-shopping-basket"></i>
             <div class="cart-table">
-                <a href="cart_view.html" class="btn active">XEM GIỎ HÀNG</a>
+                <a href="gio-hang.html" class="btn active">XEM GIỎ HÀNG</a>
             </div>
         </div>
     </div><!-- .header-search -->
