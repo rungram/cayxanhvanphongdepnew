@@ -34,6 +34,9 @@
 		case 'gioi-thieu-list':
 		    $template = "about_list";
 		    break;
+	    case 'danh-muc-gioi-thieu-list':
+	        $template = "danhmucgioithieulist_detail";
+	        break;
 		case 'gioi-thieu':
 		    $template = "about";
 		    break;

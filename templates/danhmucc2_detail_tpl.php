@@ -66,7 +66,7 @@
                               <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 product-block"> <a href="chi-tiet-san-pham/<?=$result_spnam[$i]['tenkhongdau']?>-<?=$result_spnam[$i]['id']?>.html" title="<?=$result_spnam[$i]["ten_vi"]?>"> <img src="upload/sanpham/<?php if($result_spnam[$i]["tc_big"]==1) echo $result_spnam[$i]["photo"]; else echo $result_spnam[$i]["photo"] ?>" class="img-responsive wp-post-image" alt="<?=$result_spnam[$i]["ten_vi"]?>" itemprop="image"> </a>
                                   <h4 class="product-name"><a href="chi-tiet-san-pham/<?=$result_spnam[$i]['tenkhongdau']?>-<?=$result_spnam[$i]['id']?>.html" title="<?=$result_spnam[$i]["ten_vi"]?>"><?=$result_spnam[$i]["ten_vi"]?></a></h4>
                                   <span class="price"><span class="amount"><?php echo $gia;?></span></span>
-                                  <button type="submit" class="single_add_to_cart_button button alt btn btn-link">Thêm vào giỏ</button>
+                                  <button onclick="addtocart(<?=$result_spnam[$i]['id']?>,1)" type="submit" class="single_add_to_cart_button button alt btn btn-link">Thêm vào giỏ</button>
                               </div>
                           <?php
                         	} 

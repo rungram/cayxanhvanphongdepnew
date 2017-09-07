@@ -20,6 +20,25 @@
 	
 ?>
 <?php //include _template."layout/menu_top.php"; ?>
+<script language="javascript"> 
+	function doEnter(evt){
+	// IE	// Netscape/Firefox/Opera
+    	var key;
+    	if(evt.keyCode == 13 || evt.which == 13){
+    	onSearch(evt);
+    	}
+	}
+	function onSearch(evt) {
+    	var keyword = document.getElementById("keyword").value;
+    	if(keyword=='')
+ 		   alert('Bạn chưa nhập tên!');
+    	else{
+    	//var encoded = Base64.encode(keyword);
+        	location.href = "index.php?com=tim-kiem&keyword="+keyword;
+        	loadPage(document.location);	
+    	}
+	}	
+</script>
 <header>
 <div class="header clearfix">
     <div class="container">
@@ -65,9 +84,10 @@
                 </div>
             	<div class="row">
                     <div class="search">
-                            <form>
-                                <input type="text" name="s" id="smobile" placeholder="Từ khóa...">
-                                <button type="submit" name="submit" id="searchsubmit">Tìm kiếm</button>
+                            <form class="fs-fsearch">
+                                <input type="text" id="keyword" placeholder="Từ khóa...">
+                                
+                                <button onclick="onSearch(event,'keyword');" type="button" name="submit">Tìm kiếm</button>
                            		<a class="pull-right" href="#"><img alt="" src="wp-content/images/vn.png"> </a>
                                 <a class="pull-right" href="#"><img alt="" src="wp-content/images/en.png"> </a>
                             </form>

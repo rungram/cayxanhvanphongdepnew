@@ -1,167 +1,82 @@
 <?php 
-            $id =  addslashes($_GET['id']);
+         
 			$d->reset();
-			$sql_tungdanhmuc="select * from #_product where hienthi =1 and id_cat='$id'  order by stt asc ";
-			$d->query($sql_tungdanhmuc);	
-			$result_spnam=$d->result_array();	
-			
-			$d->reset();
-			$sql_laycat="select * from #_product_cat where hienthi =1 and id='$id'";
-			$d->query($sql_laycat);	
-			$result_cat=$d->fetch_array();	
-			
-			$d->reset();
-			$sql_laylist="select * from #_product_list where hienthi =1 and id='".$result_cat['id_list']."'";
-			$d->query($sql_laylist);	
-			$result_laylist=$d->fetch_array();	
-			
-						
+			$id =  addslashes($_GET['id']);
+			$sql_tinl="select * from #_tinloai1_1 where hienthi =1 and id_cat='".$id."' order by id desc";
+			$d->query($sql_tinl);	
+			$result_tinl=$d->result_array();		
 			$curPage = isset($_GET['p']) ? $_GET['p'] : 1;
 			$url=getCurrentPageURL();
-			$maxR=5;
+			$maxR=10;
 			$maxP=5;
-			$paging=paging_home($result_spnam , $url, $curPage, $maxR, $maxP);
-			$result_spnam=$paging['source'];
-            
+			$paging=paging_home($result_tinl , $url, $curPage, $maxR, $maxP);
+			$result_tinl=$paging['source'];
 			
-			$total_sp = count($result_spnam);
+			
+			
+			
+			$sql_tinll_name="select * from #_tinloai1_1_cat where id='".$id."'";
+			$d->query($sql_tinll_name);	
+			$result_tinll_name=$d->fetch_array();	
+			$id_list = $result_tinll_name["id_list"];
+			
+			$sql_tinll="select * from #_tinloai1_1_list where id='".$id_list."' order by stt asc";
+			$d->query($sql_tinll);
+			$result_tinll=$d->fetch_array();
+			$href_list = 'tin-tuc-list/'.$result_tinll["tenkhongdau"].'-'.$result_tinll["id"].'.html';
+			
+			//$href_cat = "tin-tuc-cat/".$result_tinll_name["tenkhongdau"]."-".$result_tinll_name["id"].".html";
 ?>
-<section id="content">
 
-		  
-			  <!-- end divider -->
-  <div class="row">
-			    
-		<div class="col-lg-12">
-             <div class=" container content">
-			     <div class="col-lg-9">
-                        <div class="news">
-                        <h2 >Tin tức</h2>
-                        <div class="col-lg-12 listnews">
-                           
-                           <?php for($i=0,$count_tl=count($result_spnam);$i<$count_tl;$i++)
-						  { 
-						  ?>
-						  	<div class="row">
-						  	<h4><?=$result_spnam[$i]["ten_vi"]?></h4>
-                                <img class="img-responsive pull-left" alt="" src="upload/sanpham/<?php if($result_spnam[$i]["tc_big"]==1) echo $result_spnam[$i]["photo"]; else echo $result_spnam[$i]["photo"] ?>">
-                                <p><?=$result_spnam[$i]["mota_vi"]?></p>
-                                <div>
-                                	<i class="fa fa-fast-forward" aria-hidden="true">
-                                		<a href="chi-tiet-san-pham/<?=$result_spnam[$i]['tenkhongdau']?>-<?=$result_spnam[$i]['id']?>.html">Chi tiết</a>
-                                	</i>
-                                </div>                           
-                           </div>
-						  <?php 
-						  }
-						  ?>
-                          <div class="phantrang">
-                            <div class="pagination-container">
-                            <ul class="pagination">
-                            <?=$paging['paging']?>
-                            </ul>
-                            </div>
-		                  </div> 
-                        </div>                        
-                      </div>
-                        
-                    		
-            </div>
-            <div class="col-lg-3">
-                 <div class="box">
-                        	<h1>Video</h1>
-                         	<div class=" boxed">
-                            	<?php 
-                                   global $d, $item;
-                                   $sql = "select * from #_video where hienthi='1' order by stt";
-                                   $d->query($sql);
-                                   $items = $d->result_array();
-                                ?>
-                                <?php for($i=0, $count=count($items); $i<$count; $i++){?>
-                                  <iframe class="video" width="100%" height="120" src="https://www.youtube.com/embed/<?php echo $items[$i]['url'] ?>" frameborder="1" allowfullscreen></iframe>
-                                <?php }?>
-                            </div>
-                  </div>
-                  <div class="box">
-                        	<h1>Thư viện</h1>
-                         	<div class=" boxed">
-                            	<div class="content-img">
-                            	   <?php 
-                                   global $d, $item;
-                                   $sql = "select * from #_thuvienanhcapcha where hienthi='1' order by stt";
-                                   $d->query($sql);
-                                   $items = $d->result_array();
-                                ?>
-                                <?php for($i=0, $count=count($items); $i<$count; $i++){?>
-                                  <div class="padding5 item-img-left col-md-6"> <a href="chi-tiet-anh/<?=$items[$i]["thumb"]?>-<?=$items[$i]["id"]?>.html"><img src="golhar/<?=_upload_thuvienanhcapcha.$items[$i]['photo']?>"></a> </div>
-                                  <?php }?>
-                                </div>
-                            
-                            </div>
-                  </div>
-        
-            </div>
-           </div>
-    </div>
- 
-    		<div class="  clear"></div>
-            <div class=" container support">
-                        	<div class=" col-md-4 col-sm-4 col-xsm-6 col-xs-12 text-center">
-                            	 <div class="progress">
-                                      <div class="block">
-                                      	<h1>Hotline</h1>
-                                        <h3 class="title_1">Bộ phận kinh doanh</h3>
-                                        <span class=" fa-3x">(+84.8) 903610327</span>
-                                        <h3 class="title_1">Bộ phận hỗ trợ kỹ thuật</h3>
-                                        <span class="fa-3x">(+84.8) 903610327</span>
-                                        
-                                      </div>
-                              </div>
-                                
-                            </div>
-                            <div class=" col-md-4 col-sm-4 col-xsm-6 col-xs-12">
-                            	 <div class="progress">
-                                      <div class="block">
-                                      	 <h1>Suport online</h1>
-                                         <h3 class="title_1"></h3>
-                                        <div class="httt">
-                                        <img src="img/index_32.png" width="49"><span class="httt1">Bộ phận kinh doanh</span>
-                                        </div>
-                                        <div class="httt">
-                                        <img src="img/index_32.png" alt="" width="49"><span class="httt1">Bộ phận hỗ trợ kỹ thuật</span>
-                                        </div>
-                                        
-                                      </div>
-                              </div>                                
-                            </div>
-                            <div class=" col-md-4 col-sm-4 col-xsm-6 col-xs-12">
-                            	 <div class="progress">
-                                      <div class="block block-lineket">
-                                      	 <h1>Mạng xã hội</h1>
-                                         
-                                        <div class=" httt">
-                                            <ul class="social-network fa-3x text-center">
-                                                <li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                                <li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                                <li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                                <li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="httt">
-                                            <select onchange="window.open(this.value,'_blank')" class="block-lineket" name="select">
-                                              <option value="" selected="selected">Liên kết website</option>
-                                              <option value="https://www.google.com.vn/">Bộ nông nghiệp</option>
-                                              <option value="https://www.google.com.vn/">Đại học nông nghiệp</option>
-                                            </select>
-                                        </div>
-                                        
-                                      </div>                               
-                            </div>                     
+ <div id="wrapper">
+            <div class="">
+                <div id="pathway" class="clearfix">
+                    <div class="container">
+                        <div id="breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 
-			        	</div>
-    </div>
+                            <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                <a href="index.html" itemprop="item"><span itemprop="name" class="hidden-xs">Trang chủ</span></a><meta itemprop="position" content="1">
+                            </span> 	
+                            <span class="hidden-xs">→</span>
+                            <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                <a href="<?=$href_list?>" itemprop="item"><span itemprop="name" class="hidden-xs"><?=$result_tinll["ten_vi"]?></span></a><meta itemprop="position" content="1">
+                            </span> 	
+                            <span class="hidden-xs">→</span>
+                            <span itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                <a itemprop="item"><span itemprop="name"><?=$result_tinll_name["ten_vi"]?></span></a>
+                                <meta itemprop="position" content="2">
+                            </span>
+                        </div><!-- #breadcrumbs -->
+                    </div>
+                </div>
+                <div class="container">
+                    <div id="main">
+                        <div id="main-body">
+                            <div id="main-content">
+								<div class="box-heading"><h1 class="title">Tin tức</h1></div>
+                                <div class="box-content border pad10">
+                                	<div class="row">
+                                	<?php for($i=0,$count_tl=count($result_tinl);$i<$count_tl;$i++){ ?>
+                                	  <article itemtype="" itemscope="" class="row blog-item hentry post">	
+                                            <div class="col-xs-4">
+                                                <a href="chi-tiet-bai-viet.html" itemprop="mainEntityOfPage" title="<?=$result_tinl[$i]["ten_vi"]?>"><img src="upload/tinloai1_1/<?=$result_tinl[$i]["thumb"]?>" class="img-responsive wp-post-image" alt="<?=$result_tinl[$i]["ten_vi"]?>" itemprop="image"></a>
+                                            </div>
+                                            <div class="col-xs-8">
+                                                <h4 class="entry-title" itemprop="headline"><a href="tin-tuc-detail/<?=$result_tinl[$i]["tenkhongdau"]?>-<?=$result_tinl[$i]["id"]?>.html" rel="bookmark" itemprop="url"><?=$result_tinl[$i]["ten_vi"]?></a></h4>
+                                                <div class="entry-meta hidden">				
+                                                    <time class="meta-date updated" itemprop="datePublished" datetime="2017-04-25T23:51:56+00:00"><?=$result_tinl[$i]["ngaytao"]?></time><time class="meta-date updated" itemprop="dateModified" datetime="2017-04-25T23:52:04+00:00"></time> <span itemprop="author" class="author vcard h-card">quantri</span> <span itemprop="publisher">quantri</span>
+                                                </div><!-- .entry-meta -->
+                                                <p itemprop="description" class="entry-summary entry-content hidden-xs"><?=$result_tinl[$i]["mota_vi"]?></p>
+                                                <button class="btn btn-success"><i class=" fa fa-angle-double-right"></i> <a href="tin-tuc-detail/<?=$result_tinl[$i]["tenkhongdau"]?>-<?=$result_tinl[$i]["id"]?>.html">Chi tiết</a></button>
+                                            </div>
+                                        </article>
+                                   <?php }?>
+                            		</div>
+                                </div>		
+							</div>                                
+           					<?php include _template."layout/menu_right.php"; ?>
+                        </div>
+                    </div>
+                </div>
             </div>
-  <!-- divider -->
-			  
-	  </section>	
-	
+        </div>

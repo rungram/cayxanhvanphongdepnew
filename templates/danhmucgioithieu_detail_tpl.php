@@ -46,7 +46,7 @@
                         <div class="widget_product ">
                           <!-- banner image -->
                           <div class="box-heading">
-                            <h4 class="title"><a  title="<?=$result_laylist["ten_vi"]?>"><?=$result_laylist["ten_vi"]?></a></h4>
+                            <h4 class="title"><a href="cay-cong-trinh/index.html" title="Cây công trình"><?=$result_laylist["ten_vi"]?></a></h4>
                           </div>
                           <div class="box-content">
                           <?php
