@@ -77,7 +77,7 @@
                             <div class="footer-static-content">
                                 <div class="footer-static-title"><h3>Cây Xanh Văn Phòng Đẹp</h3></div>			<div class="textwidget">
                                     <ul>
-                                        <li class="first"><a href="http://saigonhoa.com/lien-he">Liên hệ</a></li>
+                                        <li class="first"><a href="lien-he.html">Liên hệ</a></li>
                                         <?php
                                          for($i=0;$i<count($result_tincongty);$i++)
                                          { 

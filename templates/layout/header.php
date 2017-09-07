@@ -51,16 +51,16 @@
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                 <div class="row">
                 <div class="itemSupport">
-                    <div><a href="skype:nguyenmy0203?chat"><img src="http://saigonhoa.com/skype.png" alt="Ms Mỹ: 0906 60 3389"></a></div>
-                    <div>Mr Tám: 0906 60 9989</div>
+                    <div><a href="skype:cvtam2003?chat"><img src="http://saigonhoa.com/skype.png" alt="Mr Phong: 0938 033 095"></a></div>
+                    <div>Mr Phong: 0938 033 095</div>
                 </div>
                 <div class="itemSupport">
-                    <div><a href="skype:live:kinhdoanh3_21?chat"><img src="http://saigonhoa.com/skype.png" alt="Ms. Duyên: 0909 51 3389"></a></div>
-                    <div>Mrs. Dung: 0909 661 3388</div>
+                    <div><a href="skype:cvtam2003?chat"><img src="http://saigonhoa.com/skype.png" alt="Miss Xuân: 0938 033 095"></a></div>
+                    <div>Miss Xuân: 0938 033 095</div>
                 </div>
                 <div class="itemSupport">
-                    <div><a href="skype:hoainhikinhdoanh2?chat"><img src="http://saigonhoa.com/skype.png" alt="Ms Nhi: 0906 80 3389"></a></div>
-                    <div>Ms Trí: 0922 80 3268</div>
+                    <div><a href="skype:cvtam2003?chat"><img src="http://saigonhoa.com/skype.png" alt="Mr Dương: 0938 033 095"></a></div>
+                    <div>Mr Dương: 0938 033 095</div>
                 </div>
                 </div>
                 
@@ -68,19 +68,19 @@
           <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12">
                 <div class="row">
                 <div class="itemSupport">
-                    <div><a href="#"><img alt="" src="wp-content/images/zalo.png"> 0999.920.099</a></div>
+                    <div><a href="#"><img alt="" src="wp-content/images/zalo.png"> 0938 033 095</a></div>
                 </div>
                 <div class="itemSupport">
-                    <div><a href="#"><img alt="" src="wp-content/images/viber.png"> 0999.920.099</a></div>
+                    <div><a href="#"><img alt="" src="wp-content/images/viber.png"> 0938 033 095</a></div>
                 </div>
                 <div class="itemSupport">
-                    <div class="hotline"> <i class="fa fa-2x fa-mobile "></i> Hotline: 0999.920.099</div>
+                    <div class="hotline"> <i class="fa fa-2x fa-mobile "></i> Hotline: 0938 033 095</div>
                 </div>
                 </div>
             </div>
           <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
             	<div class="itemSupport pad-b1">
-                    <div> <i class="fa fa-envelope"></i> Email: info@cayxanhvanphongdep</div>
+                    <div> <i class="fa fa-envelope"></i> Email: info@cayxanhvanphongdep.com</div>
                 </div>
             	<div class="row">
                     <div class="search">
