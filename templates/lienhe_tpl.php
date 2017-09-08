@@ -64,7 +64,7 @@ if( $_SERVER['REQUEST_METHOD'] == 'POST' )
                                 </div> <!-- /.col-md-3 -->
                                 <div class="col-md-6 col-sm-6">
                                     <div class="map-holder">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.055840701139!2d106.71567851417188!3d10.807035242300763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3e32d45a36286e50!2zQ8O0bmcgVHkgVE5ISCBL4bu5IFRodeG6rXQgS2ltIFRo4buLbmggUGjDoXQ!5e0!3m2!1svi!2s!4v1499930430804" style="border:0" allowfullscreen="" width="100%" height="450" frameborder="0"></iframe>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4660.7224179809555!2d106.7364605895438!3d10.797155984931884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175260e3aeacb03%3A0x883aa75516f521e6!2zNzEgTmd1eeG7hW4gUXXDvSDEkOG7qWMsIEtodSDEkcO0IHRo4buLIEFuIFBow7ogQW4gS2jDoW5oLCBBbiBQaMO6LCBRdeG6rW4gMiwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1504879244477" width="550" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                                     </div> <!-- /.map-holder -->
                                     
                                 </div> <!-- /.col-md-3 -->

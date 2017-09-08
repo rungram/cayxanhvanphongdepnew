@@ -52,7 +52,7 @@
                 <div class="row">
                 <div class="itemSupport">
                     <div><a href="skype:cvtam2003?chat"><img src="http://saigonhoa.com/skype.png" alt="Mr Phong: 0938 033 095"></a></div>
-                    <div>Mr Phong: 0938 033 095</div>
+                    <div>Mr Phong: 0938 033 611</div>
                 </div>
                 <div class="itemSupport">
                     <div><a href="skype:cvtam2003?chat"><img src="http://saigonhoa.com/skype.png" alt="Miss Xuân: 0938 033 095"></a></div>
@@ -74,13 +74,13 @@
                     <div><a href="#"><img alt="" src="wp-content/images/viber.png"> 0938 033 095</a></div>
                 </div>
                 <div class="itemSupport">
-                    <div class="hotline"> <i class="fa fa-2x fa-mobile "></i> Hotline: 0938 033 095</div>
+                    <div class="hotline"> <i class="fa fa-2x fa-mobile "></i> Hotline: 0938 033 611</div>
                 </div>
                 </div>
             </div>
           <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
             	<div class="itemSupport pad-b1">
-                    <div> <i class="fa fa-envelope"></i> Email: info@cayxanhvanphongdep.com</div>
+                    <div> <i class="fa fa-envelope"></i> Email: cayvanphongdep@gmail.com</div>
                 </div>
             	<div class="row">
                     <div class="search">

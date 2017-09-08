@@ -155,7 +155,7 @@
 
                         <div class="col-lg-7 col-md-6 col-sm-6 hidden-xs">
 
-                            <div class="pull-right text-right"> Hỗ trợ và CSKH: 0288.11.090<br /></div>
+                            <div class="pull-right text-right"> Hỗ trợ và CSKH: 0938.033.611<br /></div>
 
                         </div>
 
