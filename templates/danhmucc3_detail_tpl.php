@@ -85,6 +85,11 @@
                     	} 
                     	?>
                       </div>
+                      <div class="text-center">
+                            <ul class="pagination">
+                                  <?=$paging['paging']?>
+                             </ul>
+                       </div> 
                     </div>
                   </div>
                 <?php include _template."layout/menu_right.php"; ?>

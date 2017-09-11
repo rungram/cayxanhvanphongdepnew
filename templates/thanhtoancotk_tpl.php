@@ -45,20 +45,20 @@
                             <div class="col-md-6 col-sm-6">
                                 <div class="contact-form">
                                     <p class="full-row">
-                                        <label class="col-lg-5" for="name-id">Họ tên:</label>
-                                        <span class="col-lg-7 form-group"><input id="name-id" name="hoten2" type="text"></span>
+                                        <label class="col-lg-5" for="name-id">Họ tên (*):</label>
+                                        <span class="col-lg-7 form-group"><input id="name-id" name="hoten2" type="text" required></span>
                                     </p>
                                     <p class="full-row">
-                                        <label class="col-lg-5" for="email-id">Email:</label>
-                                        <span class="col-lg-7 form-group"><input id="email-id" name="email" type="text"></span>
+                                        <label class="col-lg-5" for="email-id">Email (*):</label>
+                                        <span class="col-lg-7 form-group"><input id="email-id" name="email" type="text" required></span>
                                     </p>
                                     <p class="full-row">
                                         <label class="col-lg-5" for="subject-id">Điện thoại (*):</label>
-                                        <span class="col-lg-7 form-group"><input id="subject-id" name="dienthoai" type="text"></span>
+                                        <span class="col-lg-7 form-group"><input id="subject-id" name="dienthoai" type="text" required></span>
                                     </p>
                                     <p class="full-row">
                                         <label class="col-lg-5" for="message">Địa chỉ giao hàng (*):</label>
-                                        <span class="col-lg-7 form-group"><input id="add-id" name="diachi" type="text"></span>
+                                        <span class="col-lg-7 form-group"><input id="add-id" name="diachi" type="text" required></span>
                                     </p>
                                     <p class="full-row">
                                         <label class="col-lg-5" for="message">Ghi chú</label>

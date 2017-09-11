@@ -97,6 +97,7 @@
     <link rel="stylesheet" id="pretty-photo-css" href="wp-content/plugins/easy-image-gallery/includes/lib/prettyphoto/prettyPhoto8daf.css?ver=1.1.4" type="text/css" media="screen" />
     <script type="text/javascript" src="wp-content/themes/vn_flowers/js/bootstrap.min5152.js?ver=1.0"></script>
     <script type="text/javascript" src="wp-content/themes/vn_flowers/js/custom5152.js?ver=1.0"></script>
+    <script type="text/javascript" src="js/popupalert.js"></script>
     <!--<script type="text/javascript" src="../../../../cayxanhvanphongdep.com/apis.google.com/js/plusone5152.js?ver=1.0"></script>-->
     <link rel="https://api.w.org/" href="wp-json/index.html" />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.php?rsd" />

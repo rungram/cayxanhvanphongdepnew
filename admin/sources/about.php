@@ -15,10 +15,29 @@ switch($act){
 	case "save":
 		save_gioithieu();
 		break;
-
+	case "delete":
+	    delete();
+	    break;
 		
 	default:
 		$template = "index";
+}
+function delete(){
+    global $d;
+    if(isset($_GET['id'])){
+        $id =  themdau($_GET['id']);
+        $d->setTable('gioithieu');
+        $d->setWhere('id', $id);
+        $d->select();
+        if($d->num_rows()==0) transfer("Dữ liệu không có thực", "index.php?com=about&act=man_list");
+        $row = $d->fetch_array();
+        delete_file(_upload_banner.$row['photo']);
+        delete_file(_upload_banner.$row['thumb']);
+        if($d->delete())
+            redirect("index.php?com=about&act=man_list");
+        else
+            transfer("Xóa dữ liệu bị lỗi", "index.php?com=about&act=man_list");
+    }else transfer("Không nhận được dữ liệu", "index.php?com=about&act=man_list");
 }
 function get_lists(){
     global $d, $items, $paging;
@@ -112,10 +131,9 @@ function save_gioithieu(){
     	$d->reset();
     	$d->setTable('gioithieu');
     	$d->setWhere('id', $id);
-    	if($d->update($data))
-    		transfer("Dữ liệu được cập nhật", "index.php?com=about&act=man_list");
-    	else
+    	if(!$d->update($data))
     		transfer("Cập nhật dữ liệu bị lỗi", "index.php?com=about&act=man_list");
+    	redirect("index.php?com=about&act=man_list");
 	}else{
 	    if($photo = upload_image("file", 'jpg|png|gif|JPG|jpeg|JPEG',_upload_gioithieu,$file_name)){
 	        $data['photo'] = $photo;
@@ -144,10 +162,9 @@ function save_gioithieu(){
 	    $data['ngaytao'] = lay_thoigian();	
 	    $d->reset();
 	    $d->setTable('gioithieu');
-	    if($d->insert($data))
-	        transfer("Dữ liệu được cập nhật", "index.php?com=about&act=man_list");
-	    else
-	        transfer("Cập nhật dữ liệu bị lỗi", "index.php?com=about&act=man_list");
+	    if(!$d->insert($data))
+	       transfer("Cập nhật dữ liệu bị lỗi", "index.php?com=about&act=man_list");
+	    redirect("index.php?com=about&act=man_list");
 	}
 }
 

@@ -183,15 +183,22 @@ $mail->CharSet = "utf-8";
 
 
 	if(!$mail->Send()) {
- 			transfer("Lỗi - Vui lòng thử lại", "");
+ 			transfer("Lỗi - Vui lòng thử lại", "index.html");
 						}
  	else {
 			  unset($_SESSION['cart']);
-			
+			  transfer("Đặt hàng thành công", "index.html");
 			  ?>
               <script>
-    			alert("Gửi đơn hàng thành công");
-				location.href="index.html";
+//     			alert("");
+//               popupalertbox("Thông báo!","Quý khách đã gửi đơn hàng thành công");
+//               setTimeout(
+//       		    function() 
+//       		    {
+//       		    	location.href="index.html";
+      		  	  
+//       		    }, 10000);
+			  
 			   </script>
               
               <?php

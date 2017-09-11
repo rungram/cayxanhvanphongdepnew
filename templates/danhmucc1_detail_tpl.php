@@ -15,7 +15,7 @@
 						
 			$curPage = isset($_GET['p']) ? $_GET['p'] : 1;
 			$url=getCurrentPageURL();
-			$maxR=300;
+			$maxR=8;
 			$maxP=10;
 			$paging=paging_home($result_spnam , $url, $curPage, $maxR, $maxP);
 			$result_spnam=$paging['source'];
@@ -64,6 +64,12 @@
                         	} 
                         	?>
                           </div>
+                          
+                        	<div class="text-center">
+                                <ul class="pagination">
+                                      <?=$paging['paging']?>
+                                 </ul>
+                           </div> 
                         </div>
                       </div>
                     <?php include _template."layout/menu_right.php"; ?>
