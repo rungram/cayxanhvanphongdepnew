@@ -128,6 +128,7 @@ function save_gioithieu(){
     	$data['trangcon'] = isset($_POST['trangcon']) ? 1 : 0;
     	$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
     	$data['ngaytao'] = lay_thoigian();
+    	$data['hienngonngu'] = (int)$_POST['hienngonngu'];
     	$d->reset();
     	$d->setTable('gioithieu');
     	$d->setWhere('id', $id);
@@ -160,6 +161,7 @@ function save_gioithieu(){
 	    $data['trangcon'] = isset($_POST['trangcon']) ? 1 : 0;
 	    $data['tenkhongdau'] = changeTitle($_POST['ten_vi']);
 	    $data['ngaytao'] = lay_thoigian();	
+	    $data['hienngonngu'] = (int)$_POST['hienngonngu'];
 	    $d->reset();
 	    $d->setTable('gioithieu');
 	    if(!$d->insert($data))

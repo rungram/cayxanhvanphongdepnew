@@ -289,7 +289,8 @@ function save_item(){
 		$data['hienthi'] = isset($_POST['hienthi']) ? 1 : 0;
 		$data['chinhsach'] = isset($_POST['chinhsach']) ? 1 : 0;
 		$data['ngaysua'] = time();
-		$data['ngaytao'] = lay_thoigian();			
+		$data['ngaytao'] = lay_thoigian();
+		$data['hienngonngu'] = (int)$_POST['hienngonngu'];
 		$d->setTable('product');
 		$d->setWhere('id', $id);
 		if($d->update($data))
@@ -338,7 +339,7 @@ function save_item(){
 		$data['stt'] = $_POST['stt'];
 		$data['hienthi'] = isset($_POST['hienthi']) ? 1 : 0;
 		$data['ngaytao'] = lay_thoigian();	
-		
+		$data['hienngonngu'] = (int)$_POST['hienngonngu'];
 		$d->setTable('product');
 		$d->insert($data);
 		$id_newest = $d->insert_id;
@@ -535,7 +536,8 @@ function save_cat(){
 		$data['url'] = $_POST['url'];
 		$data['menutype'] = $_POST['menutype'];
 		$data['ngaysua'] = time();
-			$data['noidung_vi'] = addslashes($_POST['noidung_vi']);
+		$data['hienngonngu'] = (int)$_POST['hienngonngu'];
+		$data['noidung_vi'] = addslashes($_POST['noidung_vi']);
 		$d->setTable('product_cat');
 		$d->setWhere('id', $id);
 		if($d->update($data))
@@ -559,6 +561,7 @@ function save_cat(){
 		$data['hienthi'] = isset($_POST['hienthi']) ? 1 : 0;
 		$data['noibat'] = isset($_POST['noibat']) ? 1 : 0;
 		$data['url'] = $_POST['url'];
+		$data['hienngonngu'] = (int)$_POST['hienngonngu'];
 		$data['ngaytao'] = time();
 			$data['noidung_vi'] = addslashes($_POST['noidung_vi']);
 		$d->setTable('product_cat');
@@ -677,7 +680,7 @@ function save_loai(){
 		$data['stt'] = $_POST['stt'];
 		$data['hienthi'] = isset($_POST['hienthi']) ? 1 : 0;
 		$data['ngaysua'] = time();
-		
+		$data['hienngonngu'] = (int)$_POST['hienngonngu'];
 		$d->setTable('product_item');
 		$d->setWhere('id', $id);
 		if($d->update($data))
@@ -702,6 +705,7 @@ function save_loai(){
 		$data['hienthi'] = isset($_POST['hienthi']) ? 1 : 0;
 		$data['ngaytao'] = time();
 		$data['menutype'] = $_POST['menutype'];
+		$data['hienngonngu'] = (int)$_POST['hienngonngu'];
 		$d->setTable('product_item');
 		if($d->insert($data))
 			redirect("index.php?com=product&act=man_item");
@@ -808,6 +812,7 @@ function save_list(){
 		        }
 		    }
 		}
+		$data['hienngonngu'] = (int)$_POST['hienngonngu'];
 		$data['ten_en'] = $_POST['ten_en'];
 		$data['ten_cn'] = $_POST['ten_cn'];
 		$data['noidung_vi'] = addslashes($_POST['noidung_vi']);
@@ -831,7 +836,8 @@ function save_list(){
 	        $data['thumb'] = create_thumb($data['photo'],180, 190, _upload_sanpham,$file_name,2);
 	        $data['thumb2'] = create_thumb($data['photo'],480, 480, _upload_sanpham,$file_name,2);
 	        $data['thumb_tc'] = create_thumb($data['photo'],400, 290, _upload_sanpham,$file_name,2);
-	    }				
+	    }
+	    $data['hienngonngu'] = (int)$_POST['hienngonngu'];
 	    $data['mota_vi'] = $_POST['mota_vi'];
 		$data['ten_vi'] = $_POST['ten_vi'];
 		$data['ten_en'] = $_POST['ten_en'];

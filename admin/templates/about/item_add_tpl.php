@@ -99,7 +99,50 @@ function get_main_category()
     
 	<b>Trang chủ</b> <input type="checkbox" name="trangchu" <?=(!isset($item['trangchu']) || $item['trangchu']==1)?'checked="checked"':''?>><br /> 
 	<b>Trang con</b> <input type="checkbox" name="trangcon" <?=(!isset($item['trangcon']) || $item['trangcon']==1)?'checked="checked"':''?>><br /> 
-	
+	<b>Chọn ngôn ngữ</b>  
+    <select id="hienngonngu" name="hienngonngu" class="main_font">
+    <?php
+    if((int)$item["hienngonngu"]==1) 
+    {
+    ?>
+        <option value="3">Cả hai</option>
+        <option value="1" selected>Tiếng Việt</option>
+        <option value="2">Tiếng Anh</option>
+    <?php 
+    }
+    ?>
+    <?php
+    if((int)$item["hienngonngu"]==2) 
+    {
+    ?>
+        <option value="3">Cả hai</option>
+        <option value="1">Tiếng Việt</option>
+        <option value="2" selected>Tiếng Anh</option>
+    <?php 
+    }
+    ?>
+    <?php
+    if((int)$item["hienngonngu"]==3) 
+    {
+    ?>
+        <option value="3" selected>Cả hai</option>
+        <option value="1">Tiếng Việt</option>
+        <option value="2">Tiếng Anh</option>
+    <?php 
+    }
+    ?>
+    <?php
+    if(!isset($item['hienngonngu'])) 
+    {
+    ?>
+        <option value="3" selected>Cả hai</option>
+        <option value="1">Tiếng Việt</option>
+        <option value="2">Tiếng Anh</option>
+    <?php 
+    }
+    ?>
+	</select>
+	<br /><br />
 	<input type="hidden" name="id" id="id" value="<?=@$item['id']?>" />
 	<input type="submit" value="Lưu" class="btn" />
 	<input type="button" value="Thoát" onclick="javascript:window.location='index.php?com=about&act=capnhat'" class="btn" />

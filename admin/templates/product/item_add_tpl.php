@@ -297,35 +297,32 @@ function get_main_list22($id_mau)
  
     <br /><br />   
     <b>Tên sản phẩm</b> <input type="text" name="ten_vi" value="<?=$item['ten_vi']?>" class="input" /><br /> 
+    <b>Tên tiếng anh</b> <input type="text" name="ten_en" value="<?=$item['ten_en']?>" class="input" /><br /><br>
     <b>Giá sản phẩm</b> <input type="text" name="gia"    value="<?=$item['gia']?>"    class="input" /><br />  
     <b>VAT</b> <input type="text" name="vat"    value="<?=$item['vat']?>"    class="input" /><br />  
     <b>Phí vận chuyển</b> <input type="text" name="phivanchuyen"    value="<?=$item['phivanchuyen']?>"    class="input" /><br />  
     <b>Giá khuyến mãi(nếu có)</b> <input type="text" name="giagiam"    value="<?=$item['giagiam']?>"    class="input" /><br />  
-    <b>Mô tả ngắn</b>  <br /> 
+    <b>Mô tả ngắn tiếng Việt</b>  <br /> 
    <textarea class="ckeditor" name="mota_vi"><?=$item['mota_vi']?></textarea> 
     <br />  
-    <b>Mô tả ngắn thêm</b> <br /> 
-    <textarea class="ckeditor"  name="mota_en" cols="80" rows="5" ><?=$item['mota_en']?>
-    </textarea>
-    <br />     
-         
-     
+    <b>Mô tả ngắn tiếng Anh</b>  <br /> 
+   <textarea class="ckeditor" name="mota_en"><?=$item['mota_en']?></textarea> 
+    <br /> 
 
     
     <br /><br /> 
-    <b>Thông số kỹ thuật </b><br/>
+    <b>Thông số kỹ thuật tiếng Việt</b><br/>
 	<div>
 	 <textarea class="ckeditor"  name="noidung_vi" id="noidung_vi"><?=$item['noidung_vi']?></textarea></div>
     <br /><br />  
 
-    
+   <b>Thông số kỹ thuật tiếng Anh</b><br/>
+	<div>
+	 <textarea class="ckeditor"  name="noidung_en" id="noidung_vi"><?=$item['noidung_en']?></textarea></div>
+    <br /><br />   
     <b>Video hình</b> <input type="text" name="video_hinh" value="<?=$item['video_hinh']?>" class="input" /><br />
 (mã sau v= của youtube)  	<br /><br />
      <br /><br /> 
-     <b>Đánh giá chi tiết </b><br/>
-	<div>
-	 <textarea  class="ckeditor"  name="noidung_en" id="noidung_en"><?=$item['noidung_en']?></textarea></div>
-    <br /><br />  
     <b>Số thứ tự</b> <input type="text" name="stt" value="<?=isset($item['stt'])?$item['stt']:1?>" style="width:30px"><br>
     <br />  
    	<b>Hiển thị</b> <input type="checkbox" name="hienthi" <?=(!isset($item['hienthi']) || $item['hienthi']==1)?'checked="checked"':''?>><br /> 
@@ -334,6 +331,50 @@ function get_main_list22($id_mau)
    	<b>Xuất xứ</b><input type="text" name="xuat_xu" value="<?=$item['xuat_xu']?>" class="input" /><br><br>
    	<b>Nhà cung cấp</b><input type="text" name="nhacungcap" value="<?=$item['nhacungcap']?>" class="input" /><br><br>
    	<b>Tình trạng</b> <?php echo $str_tinhtrang;?><br><br>
+   	<b>Chọn ngôn ngữ</b>  
+    <select id="hienngonngu" name="hienngonngu" class="main_font">
+    <?php
+    if((int)$item["hienngonngu"]==1) 
+    {
+    ?>
+        <option value="3">Cả hai</option>
+        <option value="1" selected>Tiếng Việt</option>
+        <option value="2">Tiếng Anh</option>
+    <?php 
+    }
+    ?>
+    <?php
+    if((int)$item["hienngonngu"]==2) 
+    {
+    ?>
+        <option value="3">Cả hai</option>
+        <option value="1">Tiếng Việt</option>
+        <option value="2" selected>Tiếng Anh</option>
+    <?php 
+    }
+    ?>
+    <?php
+    if((int)$item["hienngonngu"]==3) 
+    {
+    ?>
+        <option value="3" selected>Cả hai</option>
+        <option value="1">Tiếng Việt</option>
+        <option value="2">Tiếng Anh</option>
+    <?php 
+    }
+    ?>
+    <?php
+    if(!isset($item['hienngonngu'])) 
+    {
+    ?>
+        <option value="3" selected>Cả hai</option>
+        <option value="1">Tiếng Việt</option>
+        <option value="2">Tiếng Anh</option>
+    <?php 
+    }
+    ?>
+	</select>
+	<br /><br />
 	<input type="hidden" name="id" id="id" value="<?=@$item['id']?>" />
 	<input type="submit" value="Lưu" class="btn" />
 	<input type="button" value="Thoát" onclick="javascript:window.location='index.php?com=product&act=man'" class="btn" />
