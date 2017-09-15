@@ -2,7 +2,8 @@
 <table class="blue_table">
 	<tr>
 		<th style="width:5%;">STT</th>
-		<th style="width:20%;">Tên</th>	
+		<th style="width:20%;">Tên tiếng Việt</th>	
+		<th style="width:20%;">Tên tiếng Anh</th>	
 		<th style="width:5%;">Hiển thị</th>
 		<th style="width:5%;">Sửa</th>
 		<th style="width:5%;">Xóa</th>
@@ -10,7 +11,8 @@
 	<?php for($i=0, $count=count($items); $i<$count; $i++){?>
 	<tr>
 		<td style="width:5%;"><?=$items[$i]['stt']?></td>
-		<td align="center" style="width:20%;"><?=$items[$i]['ten_vi']?> </td>				
+		<td align="center" style="width:20%;"><?=$items[$i]['ten_vi']?> </td>
+		<td align="center" style="width:20%;"><?=$items[$i]['ten_en']?> </td>				
 		<td style="width:5%;">
 		
         <?php 

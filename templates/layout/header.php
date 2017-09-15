@@ -24,7 +24,7 @@ if($ngonngu == 'vn')
 	$youtube = $lienket['youtube'];
 	
 	$d->reset();
-	$sql_list ="select ten_vi	from #_product order by ten_vi asc limit 0,10";
+	$sql_list ="select ten_vi	from #_product where hienngonngu =3 or hienngonngu =1 order by ten_vi asc limit 0,10";
 	$d->query($sql_list);
 	$list_sanpham =$d->result_array();
 	$_list_sanpham = array();
@@ -175,13 +175,13 @@ else
 	$youtube = $lienket['youtube'];
 	
 	$d->reset();
-	$sql_list ="select ten_vi	from #_product order by ten_en asc limit 0,10";
+	$sql_list ="select ten_en	from #_product where hienngonngu =3 or hienngonngu =2 order by ten_en asc limit 0,10";
 	$d->query($sql_list);
 	$list_sanpham =$d->result_array();
 	$_list_sanpham = array();
 	foreach ($list_sanpham as $item)
 	{
-	    $_list_sanpham[] = $item['ten_vi'];
+	    $_list_sanpham[] = $item['ten_en'];
 	}
 ?>
 <?php //include _template."layout/menu_top.php"; ?>
@@ -270,7 +270,7 @@ function ngonngu(val){
                             <form class="fs-fsearch">
                                 <input id="search" type="text" id="keyword" placeholder="Key word...">
                                 
-                                <button onclick="onSearch(event,'keyword');" type="button" name="submit">Tìm kiếm</button>
+                                <button onclick="onSearch(event,'keyword');" type="button" name="submit">Search</button>
                            		<a onclick="ngonngu('vn')" class="pull-right"><img alt="" src="wp-content/images/vn.png"> </a>
                                 <a onclick="ngonngu('en')" class="pull-right"><img alt="" src="wp-content/images/en.png"> </a>
                             </form>

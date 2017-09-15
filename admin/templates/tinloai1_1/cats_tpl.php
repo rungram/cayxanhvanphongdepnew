@@ -3,7 +3,8 @@
 	<tr>
 		<th style="width:5%;">Stt</th>	
         <th style="width:20%;">Danh mục</th>	      
-        <th style="width:20%;">Tên hãng</th>
+        <th style="width:20%;">Tên tiếng Việt</th>
+        <th style="width:20%;">Tên tiếng Anh</th>
 		<th style="width:5%;">Sửa</th>
 		<th style="width:5%;">Xóa</th>
 	</tr>
@@ -19,7 +20,7 @@
 			?>      
         </td>      	      
 		<td style="width:20%;"><a href="index.php?com=tinloai1_1&act=edit_cat&id_list=<?=$items[$i]['id_list']?>&id=<?=$items[$i]['id']?>&curPage=<?=$_REQUEST['curPage']?>" style="text-decoration:none;"><?=$items[$i]['ten_vi']?> </a></td>
-        
+        <td style="width:20%;"><a href="index.php?com=tinloai1_1&act=edit_cat&id_list=<?=$items[$i]['id_list']?>&id=<?=$items[$i]['id']?>&curPage=<?=$_REQUEST['curPage']?>" style="text-decoration:none;"><?=$items[$i]['ten_en']?> </a></td>
 		<td style="width:5%;"><a href="index.php?com=tinloai1_1&act=edit_cat&id_list=<?=$items[$i]['id_list']?>&id=<?=$items[$i]['id']?>"><img src="media/images/edit.png" border="0" /></a></td>
 		<td style="width:5%;"><a href="index.php?com=tinloai1_1&act=delete_cat&id=<?=$items[$i]['id']?>" onClick="if(!confirm('Xác nhận xóa')) return false;"><img src="media/images/delete.png" border="0" /></a></td>
 	</tr>

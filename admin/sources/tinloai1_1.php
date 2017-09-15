@@ -342,12 +342,13 @@ function save_cat(){
 	$id = isset($_POST['id']) ? themdau($_POST['id']) : "";
 	if($id){		
 		$data['ten_vi'] = $_POST['ten_vi'];
+		$data['ten_en'] = $_POST['ten_en'];
 		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);		
 		$data['id_list'] = $_POST['id_list'];			
 		$data['stt'] = $_POST['stt'];
 		$data['hienthi'] = isset($_POST['hienthi']) ? 1 : 0;
 		$data['ngaysua'] = time();
-		
+		$data['hienngonngu'] = (int)$_POST['hienngonngu'];
 		$d->setTable('tinloai1_1_cat');
 		$d->setWhere('id', $id);
 		if($d->update($data))
@@ -357,11 +358,12 @@ function save_cat(){
 	}else{		
 		$data['id_list'] = $_POST['id_list'];
 		$data['ten_vi'] = $_POST['ten_vi'];
+		$data['ten_en'] = $_POST['ten_en'];
 		$data['tenkhongdau'] = changeTitle($_POST['ten_vi']);		
 		$data['stt'] = $_POST['stt'];
 		$data['hienthi'] = isset($_POST['hienthi']) ? 1 : 0;
 		$data['ngaytao'] = time();
-		
+		$data['hienngonngu'] = (int)$_POST['hienngonngu'];
 		$d->setTable('tinloai1_1_cat');
 		if($d->insert($data))
 			redirect("index.php?com=tinloai1_1&act=man_cat");
@@ -453,7 +455,7 @@ function save_loai(){
 		$data['stt'] = $_POST['stt'];
 		$data['hienthi'] = isset($_POST['hienthi']) ? 1 : 0;
 		$data['ngaysua'] = time();
-		
+		$data['hienngonngu'] = (int)$_POST['hienngonngu'];
 		$d->setTable('tinloai1_1_item');
 		$d->setWhere('id', $id);
 		if($d->update($data))
@@ -468,6 +470,7 @@ function save_loai(){
 		$data['stt'] = $_POST['stt'];
 		$data['hienthi'] = isset($_POST['hienthi']) ? 1 : 0;
 		$data['ngaytao'] = time();
+		$data['hienngonngu'] = (int)$_POST['hienngonngu'];
 		$d->setTable('tinloai1_1_item');
 		if($d->insert($data))
 			redirect("index.php?com=tinloai1_1&act=man_item");
@@ -556,7 +559,7 @@ function save_list(){
 		$data['stt'] = $_POST['stt'];
 		$data['hienthi'] = isset($_POST['hienthi']) ? 1 : 0;
 		$data['dichvu'] = isset($_POST['dichvu']) ? 1 : 0;
-		
+		$data['hienngonngu'] = (int)$_POST['hienngonngu'];
 		$d->setTable('tinloai1_1_list');
 		$d->setWhere('id', $id);
 		if($d->update($data))
@@ -571,7 +574,7 @@ function save_list(){
 		$data['stt'] = $_POST['stt'];
 		$data['hienthi'] = isset($_POST['hienthi']) ? 1 : 0;
 		$data['dichvu'] = isset($_POST['dichvu']) ? 1 : 0;
-		
+		$data['hienngonngu'] = (int)$_POST['hienngonngu'];
 		$d->setTable('tinloai1_1_list');
 		if($d->insert($data))
 			redirect("index.php?com=tinloai1_1&act=man_list");

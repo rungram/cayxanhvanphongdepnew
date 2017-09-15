@@ -2,9 +2,9 @@
 <table class="blue_table">
 	<tr>
 		<th style="width:5%;">STT</th>
-		<th style="width:20%;">Danh mục</th>
-		<th style="width:20%;">Class Icon Desktop</th>
-        <th style="width:20%;">Liên kết ngoài</th>
+		<th style="width:20%;">Tên tiếng việt</th>
+		<th style="width:20%;">Tên tiếng anh</th>
+        <th style="width:20%;">Loại hiển thị</th>
 		<th style="width:5%;">Hiển thị</th>
 		<th style="width:5%;">Sửa</th>
 		<th style="width:5%;">Xóa</th>
@@ -14,22 +14,37 @@
 		<td style="width:5%;"><?=$items[$i]['stt']?></td>
 		<td align="center" style="width:20%;"><?=$items[$i]['ten_vi']?> </td>		
         <td align="center" style="width:20%;"><?=$items[$i]['ten_en']?> </td>		
- 		<td align="center" style="width:20%;"><?=$items[$i]['ten_cn']?> </td>		
+ 		<td align="center" style="width:20%;"> 
+ 		<?php
+ 		if($items[$i]['hienngonngu']==1)
+ 		{
+ 		    echo "Tiếng việt";
+ 		} 
+ 		elseif($items[$i]['hienngonngu']==2)
+ 		{
+ 		    echo "Tiếng anh";
+ 		}
+ 		else
+ 		{
+ 		    echo "2 ngôn ngữ";
+ 		}
+ 		?>
+ 		</td>		
 		<td style="width:5%;">
 		
         <?php 
 		if(@$items[$i]['hienthi']==1)
 		{
-		?>
-        <a href="index.php?com=product&act=man_list&hienthi=<?=$items[$i]['id']?>"><img src="media/images/active_1.png"  border="0"/></a>
-		<? 
+        $hienthi = '<a href="index.php?com=product&act=man_list&hienthi='.$items[$i]['id'].'"><img src="media/images/active_1.png"  border="0"/></a>';
+		
 		}
 		else
 		{
-		?>
-         <a href="index.php?com=product&act=man_list&hienthi=<?=$items[$i]['id']?>"><img src="media/images/active_0.png" border="0" /></a>
-         <?php
+		   $hienthi = '<a href="index.php?com=product&act=man_list&hienthi='.$items[$i]['id'].'"><img src="media/images/active_0.png"  border="0"/></a>';
+         
 		 }?>
+        
+        <?php echo $hienthi;?>
         
         
         

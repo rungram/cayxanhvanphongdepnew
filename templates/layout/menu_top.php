@@ -210,7 +210,7 @@ else
 ?>
 <div class="navbar-collapse collapse">
 <ul id="menu-main-menu" class="nav navbar-nav">
-    <li id="menu-item-4" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4 active"><a title="Trang chủ" href="index.html">Trang chủ</a></li>
+    <li id="menu-item-4" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4 active"><a title="Trang chủ" href="index.html">Home</a></li>
     <li id="menu-item-5" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-5 dropdown">
         <a title="About us" href="#" class="dropdown-toggle" aria-haspopup="true">About us<span class="caret"></span></a>
         <ul role="menu" class=" dropdown-menu">
@@ -306,7 +306,7 @@ else
         <?php }?>
     </li>
     <?php }?>
-    <li id="menu-item-811" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-811"><a title="Liên hệ" href="lien-he.html">Liên hệ</a></li>
+    <li id="menu-item-811" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-811"><a title="Contact us" href="lien-he.html">Contact us</a></li>
     <?php 
     $d->reset();
     $sql_list ="select *	from #_tinloai1_1_list where hienthi=1 and ( hienngonngu =3 or hienngonngu = 2) order by stt asc limit 0,8";
