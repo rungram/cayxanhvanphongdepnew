@@ -60,8 +60,10 @@ height:"350px",
 	
   <b>Tên</b> <input type="text" name="ten_vi" value="<?=$item['ten_vi']?>" class="input" /><br /><br>
   <b>Tên tiếng anh</b> <input type="text" name="ten_en" value="<?=$item['ten_en']?>" class="input" /><br /><br>
- <?php if ($_REQUEST['act']==edit)
-	{?>
+ <?php 
+ if ($_REQUEST['act']=="capnhat")
+	{  
+	?>
 	<b>Hình hiện tại:</b><img src="<?=_upload_gioithieu.$item['thumb']?>"  width="120" alt="NO PHOTO" /><br />
 	<?php }?>
 	<b>Hình ảnh:</b> <input type="file" name="file" /><br />
@@ -72,7 +74,7 @@ height:"350px",
     <br /> 
      
  <b>Nội dung tiếng anh</b> <br /> 
-    <textarea class="ckeditor" id="noidung_vi"  name="noidung_en" cols="80" rows="5" ><?php echo (!empty($item['noidung_en'])?$item['noidung_en']:"")?>
+    <textarea class="ckeditor" id="noidung_en"  name="noidung_en" cols="80" rows="5" ><?php echo (!empty($item['noidung_en'])?$item['noidung_en']:"")?>
     </textarea>
     <br />  
      

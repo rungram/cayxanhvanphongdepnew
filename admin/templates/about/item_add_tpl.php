@@ -92,7 +92,7 @@ function get_main_category()
     <br /> 
      
   <b>Nội dung tiếng anh</b> <br /> 
-    <textarea class="ckeditor" id="noidung_vi"  name="noidung_en" cols="80" rows="5" ><?php echo (!empty($item['noidung_en'])?$item['noidung_en']:"")?>
+    <textarea class="ckeditor" id="noidung_en"  name="noidung_en" cols="80" rows="5" ><?php echo (!empty($item['noidung_en'])?$item['noidung_en']:"")?>
     </textarea>
     <br />  
      

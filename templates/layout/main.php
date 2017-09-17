@@ -157,7 +157,7 @@ if($ngonngu == 'vn')
       <?php 
     for ($j=0;$j<count($list);$j++)
     {
-        $href = 'danh-muc-list/'.$list[$i]["tenkhongdau"].'-'.$list[$i]["id"].'.html';
+        $href = 'danh-muc-list/'.$list[$j]["tenkhongdau"].'-'.$list[$j]["id"].'.html';
         ?>
         <div class="widget_product ">
           <div class="box-heading">
@@ -376,7 +376,7 @@ else
       <?php 
     for ($j=0;$j<count($list);$j++)
     {
-        $href = 'danh-muc-list/'.$list[$i]["tenkhongdau"].'-'.$list[$i]["id"].'.html';
+        $href = 'danh-muc-list/'.$list[$j]["tenkhongdau"].'-'.$list[$j]["id"].'.html';
         ?>
         <div class="widget_product ">
           <div class="box-heading">
@@ -394,7 +394,7 @@ else
         {
             //$gia =  number_format ($result_spnam[$i]['gia'],0,",",".")." vnđ";
             $giathuc =  ($result_spnam[$i]['giagiam']!=0)?$result_spnam[$i]['giagiam']: $result_spnam[$i]['gia'];
-            $gia = (!empty($giathuc))?number_format ($giathuc,0,",",".")." vnđ":'Call to know price';
+            $gia = (!empty($giathuc))?number_format ($giathuc,0,",",".")." vnđ":'Call for price';
             
             $giagiam =  (int)($result_spnam[$i]['giagiam']);
         ?>
