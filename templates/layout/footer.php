@@ -30,7 +30,7 @@ if($ngonngu == 'vn')
 	
 	
 	$d->reset();
-	$sql_detailq="select * from #_tinloai1_1 and ( hienngonngu =3 or hienngonngu = 1) where dichvu = 1 order by id limit 6";
+	$sql_detailq="select * from #_tinloai1_1 where dichvu = 1 and ( hienngonngu =3 or hienngonngu = 1)  order by id limit 6";
 	$d->query($sql_detailq);
 	$result_tindichvu=$d->result_array();
 	
