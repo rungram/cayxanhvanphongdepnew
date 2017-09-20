@@ -43,7 +43,7 @@ if($ngonngu == 'vn')
     	}
 	}
 	function onSearch(evt) {
-    	var keyword = document.getElementById("keyword").value;
+    	var keyword = document.getElementById("search").value;
     	if(keyword=='')
  		   alert('Bạn chưa nhập tên!');
     	else{
@@ -194,7 +194,7 @@ else
     	}
 	}
 	function onSearch(evt) {
-    	var keyword = document.getElementById("keyword").value;
+    	var keyword = document.getElementById("search").value;
     	if(keyword=='')
  		   alert('Bạn chưa nhập tên!');
     	else{
