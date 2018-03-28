@@ -15,8 +15,7 @@
 	<div id="border_sub"><div id="bg_bottom_sub">
 		<ul>	
 		   <li><a href="index.php?com=linhvuc&act=man_linhvuc">Quản lý lĩnh vực</a></li>	
-           <li><a href="index.php?com=tinloai1_1&act=man_list">Tin tức cấp 1</a></li>			
-           <li><a href="index.php?com=tinloai1_1&act=man_cat">Tin tức cấp 2</a></li>	
+           <li><a href="index.php?com=tinloai1_1&act=man_list">Tin tức cấp 1</a></li>
            <li><a href="index.php?com=tinloai1_1&act=man">Tin tức</a></li>	
            <li><a href="index.php?com=about_list&act=man_list">Quản lý giới thiệu cấp 1</a></li>
            <li><a href="index.php?com=about&act=man_list">Quản lý giới thiệu</a></li>

@@ -25,6 +25,12 @@ switch($act)
 		$d->query($sql_delete);
 		redirect("index.php?com=qlgiohang&act=man");
 		break;
+	case "status":
+		$keyword = (isset($_REQUEST['keyword'])) ? addslashes($_REQUEST['keyword']) : 1;
+		$sql_sp = "UPDATE table_donhang SET trangthai ='".$keyword."' WHERE  id = ".$id."";
+		$d->query($sql_sp);
+		redirect("index.php?com=qlgiohang&act=man");
+		break;
 }
 
 

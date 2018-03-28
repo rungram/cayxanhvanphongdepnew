@@ -44,25 +44,6 @@ switch($act){
 	case "delete_item":
 		delete_loai();
 		break;
-		
-	#===================================================	
-	case "man_cat":
-		get_cats();
-		$template = "tinloai1_1/cats";
-		break;
-	case "add_cat":		
-		$template = "tinloai1_1/cat_add";
-		break;
-	case "edit_cat":		
-		get_cat();
-		$template = "tinloai1_1/cat_add";
-		break;
-	case "save_cat":
-		save_cat();
-		break;
-	case "delete_cat":
-		delete_cat();
-		break;
 	#===================================================	
 	case "man_list":
 		get_lists();
@@ -203,7 +184,6 @@ function save_item(){
 			}
 		}					 	
 		$data['id_list'] = (int)$_POST['id_list'];		
-		$data['id_cat'] = (int)$_POST['id_cat'];		
 		$data['ten_vi'] = $_POST['ten_vi'];
 		$data['ten_en'] = $_POST['ten_en'];
 		$data['ten_cn'] = $_POST['ten_cn'];
@@ -238,7 +218,6 @@ function save_item(){
 		}		
 		
 		$data['id_list'] = (int)$_POST['id_list'];		
-		$data['id_cat'] = (int)$_POST['id_cat'];		
 		$data['ten_vi'] = $_POST['ten_vi'];
 		$data['ten_en'] = $_POST['ten_en'];
 		$data['ten_cn'] = $_POST['ten_cn'];

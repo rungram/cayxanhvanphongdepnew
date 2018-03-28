@@ -72,8 +72,7 @@ height:"300px",
 	function select_onchange2()
 	{		
 		var b=document.getElementById("id_list");
-		var c=document.getElementById("id_cat");
-		window.location ="index.php?com=tinloai1_1&act=<?php if($_REQUEST['act']=='edit') echo 'edit'; else echo 'add';?><?php if($_REQUEST['id']!='') echo"&id=".$_REQUEST['id']; ?>&id_list="+b.value+"&id_cat="+c.value;	;	
+		window.location ="index.php?com=tinloai1_1&act=<?php if($_REQUEST['act']=='edit') echo 'edit'; else echo 'add';?><?php if($_REQUEST['id']!='') echo"&id=".$_REQUEST['id']; ?>&id_list="+b.value	;	
 		return true;
 	}
 
@@ -101,32 +100,10 @@ function get_main_list()
 		$str.='</select>';
 		return $str;
 	}
-function get_main_cat()
-	{
-		$sql_huyen="select * from table_tinloai1_1_cat where id_list=".$_REQUEST['id_list']." order by id asc ";
-		$result=mysql_query($sql_huyen);
-		$str='
-			<select id="id_cat" name="id_cat" onchange="select_onchange2()">
-			<option value="0">Chọn danh mục</option>
-			';
-		while ($row_huyen=@mysql_fetch_array($result)) 
-		{
-			if($row_huyen["id"]==(int)@$_REQUEST["id_cat"])
-				$selected="selected";
-			else 
-				$selected="";
-			$str.='<option value='.$row_huyen["id"].' '.$selected.'>'.$row_huyen["ten_vi"].'</option>';			
-		}
-		$str.='</select>';
-		return $str;
-	}	
-	
-	
 ?>
 
 <form name="frm" method="post" action="index.php?com=tinloai1_1&act=save&curPage=<?=$_REQUEST['curPage']?>" enctype="multipart/form-data" class="nhaplieu">
     <b>Danh mục cấp 1:</b><?=get_main_list();?><br /><br />
-	<b>Danh mục cấp 2:</b><?=get_main_cat();?><br /><br />
     <?php if ($_REQUEST['act']==edit)
 	{?>
 	<b>Hình hiện tại:</b><img src="<?=_upload_tinloai1_1.$item['thumb']?>"  width="120" alt="NO PHOTO" /><br />
